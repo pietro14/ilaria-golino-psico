@@ -15,6 +15,7 @@ import QuizFaccioAlCasoTuo from "@/pages/tools/QuizFaccioAlCasoTuo";
 import CalcolatoreCosto from "@/pages/tools/CalcolatoreCosto";
 import DifferenzeProfessionisti from "@/pages/tools/DifferenzeProfessionisti";
 import SelfAssessment from "@/pages/tools/SelfAssessment";
+import FrasiContenuti from "@/pages/FrasiContenuti";
 import NotFound from "@/pages/NotFound";
 
 const App = () => (
@@ -36,6 +37,7 @@ const App = () => (
       <Route path="/calcolatore-costo-terapia" element={<CalcolatoreCosto />} />
       <Route path="/psicologo-psicoterapeuta-psichiatra-differenze" element={<DifferenzeProfessionisti />} />
       <Route path="/test-relazioni-dannose" element={<SelfAssessment />} />
+      <Route path="/frasi" element={<FrasiContenuti />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
