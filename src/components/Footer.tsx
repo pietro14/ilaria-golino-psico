@@ -22,7 +22,7 @@ const Footer = () => (
           <p className="text-warm-cream/70 text-sm leading-relaxed">
             Psicologa Psicoterapeuta<br />
             Analista Transazionale<br />
-            Albo A n. 24381
+            Albo Psicologi del Lazio, Sez. A n. 24381
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const Footer = () => (
             <Link to="/calcolatore-costo-terapia" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Quanto costa la terapia?</Link>
             <Link to="/psicologo-psicoterapeuta-psichiatra-differenze" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Psicologo vs Psicoterapeuta</Link>
             <Link to="/domande-risposte" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Domande e Risposte</Link>
-            <Link to="/video-instagram" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Video Instagram</Link>
+            <Link to="/video-instagram" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Video</Link>
           </nav>
         </div>
 

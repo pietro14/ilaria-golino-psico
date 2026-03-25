@@ -4,6 +4,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Quote, Star, ChevronDown, ChevronUp, MessageCircle, ExternalLink, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import facebookLogo from "@/assets/facebook-logo.svg";
+import miodottoreLogo from "@/assets/miodottore-logo.jpg";
 
 interface Review {
   name: string;
@@ -214,15 +216,16 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
                 <p className="text-xs text-muted-foreground">{review.date}</p>
               )}
             </div>
-            <span
-              className={`text-xs font-medium px-2.5 py-1 rounded-full ${
-                review.platform === "facebook"
-                  ? "bg-blue-100 text-blue-700"
-                  : "bg-green-100 text-green-700"
-              }`}
-            >
-              {review.platform === "facebook" ? "Facebook" : "MioDottore"}
-            </span>
+            <div className="flex items-center gap-1.5">
+              <img
+                src={review.platform === "facebook" ? facebookLogo : miodottoreLogo}
+                alt={review.platform === "facebook" ? "Facebook" : "MioDottore"}
+                className={`h-5 w-5 object-contain ${review.platform === "miodottore" ? "rounded-md" : ""}`}
+              />
+              <span className="text-xs text-muted-foreground">
+                {review.platform === "facebook" ? "Facebook" : "MioDottore"}
+              </span>
+            </div>
           </div>
           {review.type && (
             <p className="text-xs text-muted-foreground">{review.type}</p>

@@ -1,25 +1,9 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, Send, ExternalLink } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
+import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-
-const motivoOptions = [
-  "Dipendenza affettiva",
-  "Difficoltà relazionali",
-  "Disturbi alimentari",
-  "Ansia e stress",
-  "Disturbi di personalità",
-  "Altro",
-];
-
-const orarioOptions = [
-  "Mattina (9:00 - 12:00)",
-  "Primo pomeriggio (12:00 - 15:00)",
-  "Pomeriggio (15:00 - 18:00)",
-  "Sera (18:00 - 20:00)",
-  "Nessuna preferenza",
-];
 
 interface TemplateMessage {
   title: string;
@@ -74,24 +58,7 @@ const CopyButton = ({ text }: { text: string }) => {
   );
 };
 
-const Contatti = () => {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [motivo, setMotivo] = useState("");
-  const [orario, setOrario] = useState("");
-  const [messaggio, setMessaggio] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Richiesta colloquio - ${motivo || "Primo contatto"}`);
-    const body = encodeURIComponent(
-      `Nome: ${nome}\nEmail: ${email}\nTelefono: ${telefono}\nMotivo: ${motivo}\nPreferenza oraria: ${orario}\n\nMessaggio:\n${messaggio}`
-    );
-    window.location.href = `mailto:Ilaria.golino3@gmail.com?subject=${subject}&body=${body}`;
-  };
-
-  return (
+const Contatti = () => (
     <Layout>
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
@@ -152,115 +119,7 @@ const Contatti = () => {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <form
-              onSubmit={handleSubmit}
-              className="bg-card rounded-2xl p-6 md:p-8 border border-border/50 space-y-6"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="nome" className="text-sm font-medium text-foreground">
-                    Nome e cognome *
-                  </label>
-                  <input
-                    id="nome"
-                    type="text"
-                    required
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                    placeholder="Il tuo nome"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground">
-                    Email *
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                    placeholder="La tua email"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="telefono" className="text-sm font-medium text-foreground">
-                    Telefono
-                  </label>
-                  <input
-                    id="telefono"
-                    type="tel"
-                    value={telefono}
-                    onChange={(e) => setTelefono(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                    placeholder="Il tuo numero"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="motivo" className="text-sm font-medium text-foreground">
-                    Motivo del contatto
-                  </label>
-                  <select
-                    id="motivo"
-                    value={motivo}
-                    onChange={(e) => setMotivo(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                  >
-                    <option value="">Seleziona...</option>
-                    {motivoOptions.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="orario" className="text-sm font-medium text-foreground">
-                  Preferenza oraria
-                </label>
-                <select
-                  id="orario"
-                  value={orario}
-                  onChange={(e) => setOrario(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                >
-                  <option value="">Seleziona...</option>
-                  {orarioOptions.map((opt) => (
-                    <option key={opt} value={opt}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="messaggio" className="text-sm font-medium text-foreground">
-                  Messaggio
-                </label>
-                <textarea
-                  id="messaggio"
-                  rows={4}
-                  value={messaggio}
-                  onChange={(e) => setMessaggio(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"
-                  placeholder="Raccontami brevemente cosa stai vivendo o cosa vorresti affrontare..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
-              >
-                <Send className="w-5 h-5" />
-                Invia richiesta
-              </button>
-              <p className="text-xs text-muted-foreground text-center">
-                Cliccando &ldquo;Invia richiesta&rdquo; si aprirà il tuo client email con i dati precompilati.
-              </p>
-            </form>
+            <ContactForm />
           </AnimatedSection>
         </div>
       </section>
@@ -414,7 +273,6 @@ const Contatti = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+);
 
 export default Contatti;

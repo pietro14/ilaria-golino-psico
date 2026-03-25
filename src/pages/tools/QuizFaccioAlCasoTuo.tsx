@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, HelpCircle } from "lucide-react";
+import { MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, AlertCircle } from "lucide-react";
 
 interface Question {
   question: string;
@@ -17,6 +17,16 @@ const questions: Question[] = [
       { label: "Un rapporto complicato con il cibo o con il mio corpo", tag: "alimentari" },
       { label: "Bassa autostima e senso di inadeguatezza", tag: "autostima" },
       { label: "Ansia, stress o un momento di crisi generale", tag: "generico" },
+    ],
+  },
+  {
+    question: "Puoi descrivere meglio la tua situazione?",
+    options: [
+      { label: "Difficoltà emotive o relazionali che influenzano la mia vita quotidiana" },
+      { label: "Vorrei capire meglio me stessa e crescere come persona" },
+      { label: "Sento voci, ho esperienze dissociative o stati alterati di coscienza", tag: "fuori_campo" },
+      { label: "Ho una dipendenza da sostanze o alcol che non riesco a gestire", tag: "fuori_campo" },
+      { label: "Ho una diagnosi psichiatrica e ho bisogno di supporto farmacologico", tag: "fuori_campo" },
     ],
   },
   {
@@ -64,6 +74,16 @@ function getResult(answers: number[]) {
     if (tag) tags.push(tag);
   });
 
+  if (tags.includes("fuori_campo")) {
+    return {
+      title: "Posso orientarti verso il professionista giusto",
+      message:
+        "Dalla tua descrizione, la tua situazione potrebbe richiedere un tipo di intervento diverso dal mio ambito di specializzazione. Questo non significa che non posso aiutarti: posso consigliarti un collega o una struttura più adatti alle tue esigenze specifiche. Scrivimi senza impegno e ti orienterò verso il percorso più indicato per te.",
+      whatsappText:
+        "Buongiorno Dott.ssa Golino, ho fatto il quiz sul suo sito e vorrei un orientamento verso il professionista più adatto alla mia situazione.",
+      isFuoriCampo: true,
+    };
+  }
   if (tags.includes("dipendenza")) {
     return {
       title: "Dipendenza affettiva e relazioni",
@@ -89,6 +109,15 @@ function getResult(answers: number[]) {
         "Il rapporto con il cibo e con il proprio corpo può diventare una prigione silenziosa. Mi occupo di disturbi alimentari con un approccio che non giudica e non colpevolizza. Posso accompagnarti in un percorso per ritrovare un rapporto più sereno con il cibo e con te stessa.",
       whatsappText:
         "Buongiorno Dott.ssa Golino, ho fatto il quiz sul suo sito e credo di avere difficoltà nel rapporto con il cibo. Vorrei informazioni per un primo colloquio.",
+    };
+  }
+  if (tags.includes("autostima")) {
+    return {
+      title: "Autostima e crescita personale",
+      message:
+        "La bassa autostima può condizionare ogni aspetto della vita: le relazioni, il lavoro, le scelte quotidiane. Nel mio percorso terapeutico lavoro molto sull'immagine di sé e sulla costruzione di un senso di valore autentico. Posso accompagnarti in un cammino per riscoprire le tue risorse e imparare a volerti bene davvero.",
+      whatsappText:
+        "Buongiorno Dott.ssa Golino, ho fatto il quiz sul suo sito e credo di avere difficoltà legate all'autostima. Vorrei informazioni per un primo colloquio.",
     };
   }
   return {
@@ -156,7 +185,7 @@ const QuizFaccioAlCasoTuo = () => {
               Faccio al caso tuo?
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Rispondi a 5 brevi domande per capire se il mio approccio è adatto
+              Rispondi a 6 brevi domande per capire se il mio approccio è adatto
               alle tue esigenze. Non è un test diagnostico, ma uno strumento per
               orientarti.
             </p>
@@ -240,8 +269,12 @@ const QuizFaccioAlCasoTuo = () => {
             </div>
           ) : result ? (
             <div className="space-y-8 text-center">
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-10 h-10 text-primary" />
+              <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto ${result.isFuoriCampo ? "bg-amber-100" : "bg-primary/10"}`}>
+                {result.isFuoriCampo ? (
+                  <AlertCircle className="w-10 h-10 text-amber-600" />
+                ) : (
+                  <CheckCircle2 className="w-10 h-10 text-primary" />
+                )}
               </div>
               <h2 className="text-3xl font-serif text-foreground">
                 {result.title}

@@ -4,7 +4,6 @@ import AnimatedSection from "@/components/AnimatedSection";
 import {
   MessageCircle,
   Play,
-  ExternalLink,
   Clock,
   ChevronDown,
   Video,
@@ -30,7 +29,7 @@ const videos: Video[] = [
   { id: "czppjdtjvvw", title: "Confini emotivi", topic: "Relazioni", src: "/videos/czppjdtjvvw.mp4", instagramUrl: "https://www.instagram.com/reel/CZpPjdTJvvw/", durationLabel: "10 sec" },
   { id: "czkgb8cgxit", title: "Segnali da non ignorare", topic: "Dipendenza affettiva", src: "/videos/czkgb8cgxit.mp4", instagramUrl: "https://www.instagram.com/reel/CZkGb8cgXIT/", durationLabel: "10 sec" },
   { id: "czhtm4cbpsh", title: "Approfondimento da ascoltare con calma", topic: "Approfondimenti", src: "/videos/czhtm4cbpsh.mp4", instagramUrl: "https://www.instagram.com/reel/CZhtm4CBpSh/", durationLabel: "49 min", featured: true },
-  { id: "cyunwhthaqp", title: "Emozioni intense", topic: "Emozioni", src: "/videos/cyunwhthaqp.mp4", instagramUrl: "https://www.instagram.com/reel/CYuNWHthAqp/", durationLabel: "7 sec" },
+  { id: "cyunwhthaqp", title: "Emozioni intense", topic: "Emozioni", src: "/videos/cyunwhthaqp.mp4", instagramUrl: "https://www.instagram.com/reel/CYuNWHthAqp/", durationLabel: "7 sec", poster: "/videos/cyunwhthaqp-poster.jpg" },
   { id: "cyrpykxht1v", title: "Autostima e crescita personale", topic: "Autostima", src: "/videos/cyrpykxht1v.mp4", instagramUrl: "https://www.instagram.com/reel/CYrpYkXht1v/", durationLabel: "52 min", featured: true },
   { id: "cyjr3_obwj4", title: "Rileggere una dinamica che fa soffrire", topic: "Relazioni", src: "/videos/cyjr3_obwj4.mp4", instagramUrl: "https://www.instagram.com/reel/CYjr3_oBwJ4/", durationLabel: "23 sec" },
   { id: "cwtk2ronx-s", title: "Quando fai troppo per l'altro", topic: "Dipendenza affettiva", src: "/videos/cwtk2ronx-s.mp4", instagramUrl: "https://www.instagram.com/reel/CWtK2RONx-s/", durationLabel: "13 sec" },
@@ -66,7 +65,7 @@ function VideoCard({ video, aspect = "portrait" }: { video: Video; aspect?: "por
     <div className="bg-card rounded-2xl border border-border/50 overflow-hidden hover:shadow-elevated transition-shadow">
       <div
         className={`relative bg-black ${
-          aspect === "landscape" ? "aspect-video" : "aspect-[9/16]"
+          aspect === "landscape" ? "aspect-video" : "aspect-[3/4]"
         }`}
       >
         <video
@@ -105,16 +104,6 @@ function VideoCard({ video, aspect = "portrait" }: { video: Video; aspect?: "por
         <h3 className="font-serif text-foreground font-medium leading-snug">
           {video.title}
         </h3>
-        <a
-          href={video.instagramUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
-        >
-          <Video className="w-4 h-4" />
-          Vedi su Instagram
-          <ExternalLink className="w-3 h-3" />
-        </a>
       </div>
     </div>
   );
@@ -137,7 +126,7 @@ const Instagram = () => {
               I miei contenuti video
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Pillole, approfondimenti e riflessioni dal mio profilo Instagram.
+              Pillole, approfondimenti e riflessioni su relazioni, emozioni e crescita personale.
               Contenuti gratuiti per iniziare a prenderti cura di te.
             </p>
           </AnimatedSection>
@@ -162,7 +151,7 @@ const Instagram = () => {
           <h2 className="text-2xl font-serif text-foreground mb-8 text-center">
             Pillole brevi
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
             {visibleShorts.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}

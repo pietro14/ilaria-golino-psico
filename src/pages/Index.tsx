@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
 import { Heart, Brain, Shield, Leaf, Sparkles, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
@@ -287,6 +288,23 @@ const Index = () => (
             </AnimatedSection>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Contact Form */}
+    <section className="section-padding bg-background">
+      <div className="container-narrow">
+        <AnimatedSection>
+          <h2 className="text-3xl md:text-4xl font-serif text-foreground text-center mb-4">
+            Richiedi un appuntamento
+          </h2>
+          <p className="text-center text-muted-foreground mb-10 max-w-lg mx-auto">
+            Compila il modulo e ti ricontatterò per fissare il primo colloquio conoscitivo.
+          </p>
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <ContactForm compact />
+        </AnimatedSection>
       </div>
     </section>
 

@@ -13,7 +13,7 @@ const ChiSono = () => (
           <p className="font-script italic text-2xl text-primary">Chi sono</p>
           <h1 className="text-4xl md:text-5xl font-serif text-foreground">Dott.ssa Ilaria Golino</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Psicologa e psicoterapeuta a orientamento Analitico Transazionale. Accompagno le persone a comprendersi meglio e a costruire relazioni più sane, in uno spazio sicuro e senza giudizio.
+            Psicologa Psicoterapeuta, Analista Transazionale Certificata (CTA), membro EATA. Accompagno le persone a comprendersi meglio e a costruire relazioni più sane, in uno spazio sicuro e senza giudizio.
           </p>
           <p className="text-sm text-muted-foreground/80">Iscritta all'Ordine degli Psicologi del Lazio, Sezione A n. 24381.</p>
         </motion.div>
@@ -29,8 +29,9 @@ const ChiSono = () => (
         </AnimatedSection>
         <AnimatedSection>
           <div className="space-y-6 text-foreground leading-relaxed">
-            <p>Sono Ilaria Golino, psicoterapeuta a Roma. Mi sono specializzata in <strong>Analisi Transazionale</strong>, un approccio che mette al centro la relazione tra terapeuta e paziente e lavora su come ci relazioniamo con noi stessi e con gli altri.</p>
-            <p>Lavoro principalmente con persone che vivono <strong>difficoltà nelle relazioni</strong>: chi si ritrova sempre in legami dolorosi, chi ha paura dell'abbandono, chi fa fatica a stare da solo o chi sente di non valere abbastanza. Mi occupo anche di <strong>disturbo borderline di personalità</strong> e <strong>disturbi alimentari</strong>.</p>
+            <p>Sono Ilaria Golino, Psicologa Psicoterapeuta e <strong>Analista Transazionale Certificata (CTA)</strong>, membro dell'EATA (European Association for Transactional Analysis). Ricevo nel mio studio privato a Roma e online.</p>
+            <p>Mi sono specializzata in <strong>Analisi Transazionale integrata</strong>, un approccio che mette al centro la relazione tra terapeuta e paziente e lavora su come ci relazioniamo con noi stessi e con gli altri. Lavoro principalmente con persone che vivono <strong>difficoltà nelle relazioni</strong>: chi si ritrova sempre in legami dolorosi, chi ha paura dell'abbandono, chi fa fatica a stare da solo o chi sente di non valere abbastanza.</p>
+            <p>Mi occupo anche di <strong>disturbo borderline di personalità</strong>, <strong>disturbi alimentari</strong> e di <strong>orientamento professionale</strong>, aiutando le persone a ritrovare direzione e motivazione nel proprio percorso lavorativo.</p>
             <p>Credo che ogni persona abbia in sé le risorse per cambiare. Il mio compito è creare uno spazio sicuro dove poterle scoprire insieme, senza giudizio e con i tuoi tempi.</p>
           </div>
         </AnimatedSection>
@@ -69,9 +70,13 @@ const ChiSono = () => (
         </AnimatedSection>
         <div className="space-y-6">
           {[
-            { icon: GraduationCap, title: "Specializzazione in Psicoterapia", subtitle: "Analisi Transazionale con approccio integrato" },
-            { icon: Award, title: "Iscrizione all'Albo", subtitle: "Ordine degli Psicologi del Lazio - Sez. A n. 24381 (dal 2019)" },
-            { icon: GraduationCap, title: "Laurea in Psicologia Clinica", subtitle: "Formazione approfondita in psicologia clinica e della salute" },
+            { icon: GraduationCap, title: "Laurea Triennale in Psicologia", subtitle: "Scienze e Tecniche Psicologiche dei Processi Cognitivi — Sapienza Università di Roma" },
+            { icon: GraduationCap, title: "Laurea Magistrale in Psicologia Clinica", subtitle: "Psicologia Clinica, della Salute e della Comunità — Università dell'Aquila" },
+            { icon: Award, title: "Tirocinio professionalizzante", subtitle: "Centro di Psicologia Criminale e Istituto di Sessuologia Clinica di Roma" },
+            { icon: Award, title: "Esame di Stato e Iscrizione all'Albo", subtitle: "Ordine degli Psicologi del Lazio — Sez. A n. 24381 (gennaio 2019)" },
+            { icon: GraduationCap, title: "Master II Livello in Psicodiagnosi", subtitle: "Sapienza Università di Roma — MMPI, Rorschach, test proiettivi e psicodiagnostici" },
+            { icon: GraduationCap, title: "Specializzazione in Psicoterapia", subtitle: "Analisi Transazionale integrata — Università Pontificia Salesiana di Roma" },
+            { icon: Award, title: "CTA — Analista Transazionale Certificata", subtitle: "Membro EATA (European Association for Transactional Analysis)" },
           ].map((item, i) => (
             <AnimatedSection key={item.title} delay={i * 0.1}>
               <div className="flex items-start gap-4 p-5 rounded-2xl bg-background">
