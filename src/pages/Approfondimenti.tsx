@@ -1,10 +1,12 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BookOpen, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Approfondimenti = () => (
   <Layout>
+    <SEO title="Approfondimenti" description="Articoli e approfondimenti su psicologia, relazioni e crescita personale." path="/approfondimenti" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

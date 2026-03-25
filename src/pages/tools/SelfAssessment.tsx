@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   MessageCircle,
@@ -144,6 +145,7 @@ const SelfAssessment = () => {
 
   return (
     <Layout>
+      <SEO title="Test di Auto-valutazione" description="Un breve test per riflettere sul tuo rapporto con le relazioni e il benessere emotivo." path="/test-relazioni-dannose" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">

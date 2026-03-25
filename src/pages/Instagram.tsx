@@ -1,5 +1,6 @@
 import { useRef, useCallback, useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   MessageCircle,
@@ -28,8 +29,7 @@ const videos: Video[] = [
   { id: "czppjdtjvvw", title: "Confini emotivi", topic: "Relazioni", src: "/videos/czppjdtjvvw.mp4", instagramUrl: "https://www.instagram.com/reel/CZpPjdTJvvw/", durationLabel: "10 sec" },
   { id: "czkgb8cgxit", title: "Segnali da non ignorare", topic: "Dipendenza affettiva", src: "/videos/czkgb8cgxit.mp4", instagramUrl: "https://www.instagram.com/reel/CZkGb8cgXIT/", durationLabel: "10 sec" },
 { id: "cyunwhthaqp", title: "Emozioni intense", topic: "Emozioni", src: "/videos/cyunwhthaqp.mp4", instagramUrl: "https://www.instagram.com/reel/CYuNWHthAqp/", durationLabel: "7 sec", poster: "/videos/cyunwhthaqp-poster.jpg" },
-  { id: "cyrpykxht1v", title: "Autostima e crescita personale", topic: "Autostima", src: "/videos/cyrpykxht1v.mp4", instagramUrl: "https://www.instagram.com/reel/CYrpYkXht1v/", durationLabel: "52 min", featured: true },
-  { id: "cyjr3_obwj4", title: "Rileggere una dinamica che fa soffrire", topic: "Relazioni", src: "/videos/cyjr3_obwj4.mp4", instagramUrl: "https://www.instagram.com/reel/CYjr3_oBwJ4/", durationLabel: "23 sec" },
+{ id: "cyjr3_obwj4", title: "Rileggere una dinamica che fa soffrire", topic: "Relazioni", src: "/videos/cyjr3_obwj4.mp4", instagramUrl: "https://www.instagram.com/reel/CYjr3_oBwJ4/", durationLabel: "23 sec" },
   { id: "cwtk2ronx-s", title: "Quando fai troppo per l'altro", topic: "Dipendenza affettiva", src: "/videos/cwtk2ronx-s.mp4", instagramUrl: "https://www.instagram.com/reel/CWtK2RONx-s/", durationLabel: "13 sec" },
   { id: "cunhi-hoynt", title: "Restare in contatto con sé", topic: "Autostima", src: "/videos/cunhi-hoynt.mp4", instagramUrl: "https://www.instagram.com/reel/CUnHi-Hoynt/", durationLabel: "28 sec" },
   { id: "cucqr4joei1", title: "Imparare a fermarsi", topic: "Benessere psicologico", src: "/videos/cucqr4joei1.mp4", instagramUrl: "https://www.instagram.com/reel/CUCqR4joEI1/", durationLabel: "36 sec" },
@@ -108,6 +108,7 @@ const Instagram = () => {
 
   return (
     <Layout>
+      <SEO title="Video" description="Video, pillole e approfondimenti su relazioni, emozioni e crescita personale." path="/video" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">
@@ -144,7 +145,7 @@ const Instagram = () => {
           <h2 className="text-2xl font-serif text-foreground mb-8 text-center">
             Pillole brevi
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-5">
             {shortVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
@@ -175,7 +176,7 @@ const Instagram = () => {
                 Scrivimi su WhatsApp
               </a>
               <a
-                href="https://www.instagram.com/ilariagolino.psico/"
+                href="https://www.instagram.com/ilariagolino.psicologa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, AlertCircle } from "lucide-react";
 
@@ -174,6 +175,7 @@ const QuizFaccioAlCasoTuo = () => {
 
   return (
     <Layout>
+      <SEO title="Quiz: Faccio al Caso Tuo?" description="Rispondi a 6 domande per capire se il mio approccio è adatto alle tue esigenze." path="/quiz" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">

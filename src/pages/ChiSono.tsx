@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { GraduationCap, Award, Heart, MessageCircle, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -7,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const ChiSono = () => (
   <Layout>
+    <SEO title="Chi Sono" description="Sono Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata a Roma. Scopri la mia formazione e il mio approccio." path="/chi-sono" />
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl mx-auto text-center space-y-6">

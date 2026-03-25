@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   MessageCircle,
@@ -183,6 +184,7 @@ const DifferenzeProfessionisti = () => {
 
   return (
     <Layout>
+      <SEO title="Psicologo vs Psicoterapeuta" description="Le differenze tra psicologo, psicoterapeuta e psichiatra spiegate in modo chiaro." path="/psicologo-psicoterapeuta-psichiatra-differenze" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">

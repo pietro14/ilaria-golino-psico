@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
@@ -9,6 +10,7 @@ import ilariaGolino from "@/assets/ilaria-golino.png";
 
 const Index = () => (
   <Layout>
+    <SEO path="/" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

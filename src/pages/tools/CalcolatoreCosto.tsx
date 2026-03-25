@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Calculator, MessageCircle, Euro, CalendarDays, TrendingDown } from "lucide-react";
 
@@ -18,6 +19,7 @@ const CalcolatoreCosto = () => {
 
   return (
     <Layout>
+      <SEO title="Quanto Costa la Terapia" description="Calcolatore trasparente per pianificare il tuo investimento nel benessere psicologico." path="/calcolatore-costo-terapia" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">

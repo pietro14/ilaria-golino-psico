@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin, Train, Car, Monitor, Shield, Clock, CheckCircle2, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -8,6 +9,7 @@ import studioAngolo from "@/assets/studio-angolo.png";
 
 const Studio = () => (
   <Layout>
+    <SEO title="Lo Studio" description="Il mio studio a Roma, zona Cinecittà, vicino Metro A Giulio Agricola. Ricevo anche online in videoconsulto." path="/studio" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

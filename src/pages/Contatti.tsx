@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, ExternalLink } from "lucide-react";
@@ -60,6 +61,7 @@ const CopyButton = ({ text }: { text: string }) => {
 
 const Contatti = () => (
     <Layout>
+      <SEO title="Contatti" description="Contattami per un primo colloquio conoscitivo. Studio in Via Tuscolana 1168, Roma. WhatsApp: 351 549 9417." path="/contatti" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-wide">
@@ -178,7 +180,7 @@ const Contatti = () => (
               {
                 icon: MapPin,
                 title: "Studio",
-                lines: ["Via Tuscolana 1168", "00174 Roma (zona Cinecittà)"],
+                lines: ["Via Tuscolana 1168", "00172 Roma (zona Cinecittà)"],
               },
               {
                 icon: Clock,
@@ -196,7 +198,7 @@ const Contatti = () => (
               {
                 icon: Mail,
                 title: "Email",
-                lines: ["Ilaria.golino3@gmail.com", "PEC: ilariagolino@pec.psylazio.it"],
+                lines: ["Ilaria.golino3@gmail.com", "PEC: ilaria.golino@psypec.it"],
               },
             ].map((info, i) => (
               <AnimatedSection key={info.title} delay={i * 0.1}>

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin, Monitor, Zap, Euro, Clock, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const Servizi = () => (
   <Layout>
+    <SEO title="Servizi" description="Psicoterapia individuale, di coppia e online. Sedute da 50 minuti in studio a Roma o in videoconsulto." path="/servizi" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

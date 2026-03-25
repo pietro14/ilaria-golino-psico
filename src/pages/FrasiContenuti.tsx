@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Heart, Sparkles, Brain, Leaf, Baby, Eye, Sunrise, BookOpen, HelpCircle, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -175,6 +176,7 @@ const FrasiContenuti = () => {
 
   return (
     <Layout>
+      <SEO title="Frasi e Riflessioni" description="Pensieri, spunti e riflessioni su autostima, relazioni, crescita personale e benessere emotivo." path="/frasi" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow text-center space-y-6">

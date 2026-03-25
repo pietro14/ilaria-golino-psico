@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Quote, Star, ChevronDown, ChevronUp, MessageCircle, ExternalLink, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -263,6 +264,7 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
 
 const Recensioni = () => (
   <Layout>
+    <SEO title="Recensioni" description="Cosa dicono di me i miei pazienti. 21 recensioni verificate su Facebook e MioDottore con valutazione 5 su 5." path="/recensioni" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

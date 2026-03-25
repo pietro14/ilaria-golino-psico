@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 import { Heart, Shield, Leaf, Brain, Flame, Star, AlertCircle, MessageCircle, CheckCircle2, ArrowRight } from "lucide-react";
@@ -134,6 +135,7 @@ const quandoChiedereAiuto = [
 
 const AreeIntervento = () => (
   <Layout>
+    <SEO title="Aree di Intervento" description="Dipendenza affettiva, disturbi di personalità, disturbi alimentari, ansia e stress. Scopri le aree in cui posso aiutarti." path="/aree-intervento" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">

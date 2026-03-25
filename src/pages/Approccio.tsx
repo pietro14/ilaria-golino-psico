@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Heart, Users, Shield, CheckCircle2, Monitor, Zap, Calendar, Clock, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -7,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const Approccio = () => (
   <Layout>
+    <SEO title="Il Mio Approccio" description="Analisi Transazionale integrata: un approccio caldo, collaborativo e orientato al cambiamento concreto." path="/approccio" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
