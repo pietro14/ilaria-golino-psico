@@ -39,9 +39,6 @@ const landscapeVideo = videos.find((v) => v.orientation === "landscape");
 const shortVideos = videos.filter(
   (v) => !v.featured && v.orientation !== "landscape"
 );
-const featuredVertical = videos.filter(
-  (v) => v.featured && v.orientation !== "landscape"
-);
 
 function VideoCard({ video, aspect = "portrait" }: { video: Video; aspect?: "portrait" | "landscape" }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -154,22 +151,6 @@ const Instagram = () => {
           </div>
         </div>
       </section>
-
-      {/* Featured long vertical videos */}
-      {featuredVertical.length > 0 && (
-        <section className="section-padding bg-background">
-          <div className="container-wide max-w-4xl mx-auto">
-            <h2 className="text-2xl font-serif text-foreground mb-8 text-center">
-              Approfondimenti
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {featuredVertical.map((video) => (
-                <VideoCard key={video.id} video={video} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* CTA */}
       <section className="section-padding bg-secondary/40">

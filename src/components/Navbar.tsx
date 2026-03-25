@@ -29,7 +29,7 @@ const navItems: NavItem[] = [
   {
     label: "Risorse",
     children: [
-      { href: "/video-instagram", label: "Video" },
+      { href: "/video", label: "Video" },
       { href: "/frasi", label: "Frasi e riflessioni" },
       { href: "/approfondimenti", label: "Blog" },
       { href: "/quiz", label: "Faccio al caso tuo?" },

@@ -45,7 +45,7 @@ const Footer = () => (
             <Link to="/calcolatore-costo-terapia" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Quanto costa la terapia?</Link>
             <Link to="/psicologo-psicoterapeuta-psichiatra-differenze" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Psicologo vs Psicoterapeuta</Link>
             <Link to="/domande-risposte" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Domande e Risposte</Link>
-            <Link to="/video-instagram" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Video</Link>
+            <Link to="/video" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Video</Link>
             <Link to="/frasi" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Frasi e riflessioni</Link>
           </nav>
         </div>
