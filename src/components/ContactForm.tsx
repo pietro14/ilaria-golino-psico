@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 const giorni = ["Lun", "Mar", "Mer", "Gio", "Ven"];
 const fasce = [
@@ -17,6 +17,8 @@ const motivoOptions = [
   "Altro",
 ];
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -24,6 +26,7 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   const [motivo, setMotivo] = useState("");
   const [messaggio, setMessaggio] = useState("");
   const [disponibilita, setDisponibilita] = useState<Set<string>>(new Set());
+  const [status, setStatus] = useState<Status>("idle");
 
   const toggleSlot = (slot: string) => {
     setDisponibilita((prev) => {
@@ -35,7 +38,7 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   };
 
   const formatDisponibilita = () => {
-    if (disponibilita.size === 0) return "Nessuna preferenza";
+    if (disponibilita.size === 0) return "";
     return Array.from(disponibilita)
       .sort()
       .map((s) => {
@@ -45,16 +48,57 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
       .join(", ");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Richiesta colloquio - ${motivo || "Primo contatto"}`
-    );
-    const body = encodeURIComponent(
-      `Nome: ${nome}\nEmail: ${email}\nTelefono: ${telefono}\nMotivo: ${motivo}\nDisponibilità: ${formatDisponibilita()}\n\nMessaggio:\n${messaggio}`
-    );
-    window.location.href = `mailto:Ilaria.golino3@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nome,
+          email,
+          telefono,
+          motivo,
+          disponibilita: formatDisponibilita(),
+          messaggio,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Errore invio");
+
+      setStatus("sent");
+      setNome("");
+      setEmail("");
+      setTelefono("");
+      setMotivo("");
+      setMessaggio("");
+      setDisponibilita(new Set());
+    } catch {
+      setStatus("error");
+    }
   };
+
+  if (status === "sent") {
+    return (
+      <div className="bg-card rounded-2xl p-8 md:p-12 border border-border/50 text-center space-y-4">
+        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto">
+          <CheckCircle2 className="w-8 h-8 text-green-600" />
+        </div>
+        <h3 className="text-xl font-serif text-foreground">Richiesta inviata!</h3>
+        <p className="text-muted-foreground">
+          Grazie per avermi contattata. Ti risponderò il prima possibile, di solito entro 24 ore.
+        </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="text-primary font-medium hover:opacity-80 transition-opacity text-sm"
+        >
+          Invia un'altra richiesta
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -204,15 +248,43 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
           />
         </div>
       )}
+
+      {status === "error" && (
+        <div className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
+          <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          <p>
+            Si è verificato un errore. Riprova oppure{" "}
+            <a
+              href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium"
+            >
+              scrivimi su WhatsApp
+            </a>.
+          </p>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
+        disabled={status === "sending"}
+        className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        <Send className="w-5 h-5" />
-        Invia richiesta
+        {status === "sending" ? (
+          <>
+            <Loader2 className="w-5 h-5 animate-spin" />
+            Invio in corso...
+          </>
+        ) : (
+          <>
+            <Send className="w-5 h-5" />
+            Invia richiesta
+          </>
+        )}
       </button>
       <p className="text-xs text-muted-foreground text-center">
-        Cliccando &ldquo;Invia richiesta&rdquo; si aprirà il tuo client email con i dati precompilati.
+        I tuoi dati verranno utilizzati esclusivamente per ricontattarti.
       </p>
     </form>
   );
