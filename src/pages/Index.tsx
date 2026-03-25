@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Heart, Brain, Shield, Leaf, Sparkles, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import ilariaGolino from "@/assets/ilaria-golino.png";
-import studioPanoramica from "@/assets/studio-panoramica.png";
+
 
 const Index = () => (
   <Layout>
@@ -227,13 +227,7 @@ const Index = () => (
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.15}>
-            <div className="card-elevated bg-secondary/30 space-y-6 overflow-hidden">
-              <img
-                src={studioPanoramica}
-                alt="Studio della Dott.ssa Ilaria Golino - Roma Via Tuscolana"
-                className="w-full h-48 object-cover rounded-xl -mt-2"
-                loading="lazy"
-              />
+            <div className="card-elevated bg-secondary/30 space-y-6">
               <h3 className="text-2xl font-serif font-semibold text-foreground">Modalità di lavoro</h3>
               <div className="space-y-4">
                 {[
