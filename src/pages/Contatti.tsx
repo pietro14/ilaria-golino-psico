@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { MessageCircle, MapPin, Clock, Shield, Mail, Phone, Copy, Check, Send, ExternalLink } from "lucide-react";
+import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, Send, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 const motivoOptions = [
