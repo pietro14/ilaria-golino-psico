@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import type { MouseEvent } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo-new.png";
+import logo from "@/assets/logo-round.png";
 
 interface NavLink {
   href: string;
