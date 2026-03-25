@@ -22,7 +22,7 @@ interface Video {
 
 const videos: Video[] = [
   { id: "dmn0i6oi4kc", title: "Contenuto originale Instagram", topic: "Relazioni", src: "/videos/dmn0i6oi4kc.mp4", instagramUrl: "https://www.instagram.com/p/DMN0i6oI4Kc/", durationLabel: "1 min" },
-  { id: "dj9rlsnplcd", title: "Intervento audio originale", topic: "Approfondimenti", src: "/videos/dj9rlsnplcd.mp4", instagramUrl: "https://www.instagram.com/reel/DJ9rlSNplcD/", durationLabel: "6 min", featured: true, orientation: "landscape", poster: "/videos/dj9rlsnplcd-poster.jpg" },
+  { id: "dj9rlsnplcd", title: "Intervento audio originale", topic: "Approfondimenti", src: "/videos/dj9rlsnplcd-v2.mp4", instagramUrl: "https://www.instagram.com/reel/DJ9rlSNplcD/", durationLabel: "6 min", featured: true, orientation: "landscape", poster: "/videos/dj9rlsnplcd-poster.jpg" },
   { id: "ca-ayokvywh", title: "Autostima e relazioni", topic: "Autostima", src: "/videos/ca-ayokvywh.mp4", instagramUrl: "https://www.instagram.com/reel/Ca-aYoKvYWH/", durationLabel: "15 sec" },
   { id: "cakxj-sokmz", title: "Crescita personale e consapevolezza", topic: "Crescita personale", src: "/videos/cakxj-sokmz.mp4", instagramUrl: "https://www.instagram.com/reel/Cakxj-sokmz/", durationLabel: "18 sec" },
   { id: "czppjdtjvvw", title: "Confini emotivi", topic: "Relazioni", src: "/videos/czppjdtjvvw.mp4", instagramUrl: "https://www.instagram.com/reel/CZpPjdTJvvw/", durationLabel: "10 sec" },
@@ -84,7 +84,7 @@ function VideoCard({ video, aspect = "portrait" }: { video: Video; aspect?: "por
             className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group"
             aria-label="Riproduci video"
           >
-            <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 rounded-full bg-white/50 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               <Play className="w-7 h-7 text-foreground ml-1" />
             </div>
           </button>
