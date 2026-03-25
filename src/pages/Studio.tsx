@@ -75,7 +75,7 @@ const Studio = () => (
               <img
                 src={studioPanoramica}
                 alt="Studio Dott.ssa Ilaria Golino - vista panoramica"
-                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full object-contain hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -93,7 +93,7 @@ const Studio = () => (
               <img
                 src={studioPoltrona}
                 alt="Studio - area colloquio con poltrona"
-                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full object-contain hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -184,7 +184,7 @@ const Studio = () => (
               <img
                 src={studioAngolo}
                 alt="Studio - angolo accogliente"
-                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full object-contain hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
