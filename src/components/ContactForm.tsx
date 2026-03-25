@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 const giorni = ["Lun", "Mar", "Mer", "Gio", "Ven"];
@@ -27,6 +27,14 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   const [messaggio, setMessaggio] = useState("");
   const [disponibilita, setDisponibilita] = useState<Set<string>>(new Set());
   const [status, setStatus] = useState<Status>("idle");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // When status changes to "sent", scroll to keep the confirmation visible
+  useEffect(() => {
+    if (status === "sent" && containerRef.current) {
+      containerRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
 
   const toggleSlot = (slot: string) => {
     setDisponibilita((prev) => {
@@ -82,7 +90,7 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
 
   if (status === "sent") {
     return (
-      <div className="bg-card rounded-2xl p-8 md:p-12 border border-border/50 text-center space-y-4">
+      <div ref={containerRef} className="bg-card rounded-2xl p-8 md:p-12 border border-border/50 text-center space-y-4">
         <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-8 h-8 text-green-600" />
         </div>
