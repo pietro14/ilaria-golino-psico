@@ -100,7 +100,7 @@ const Navbar = () => {
           onClick={handleLogoClick}
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          <img src={logo} alt="Dott.ssa Ilaria Golino Logo" className="w-11 h-11" />
+          <img src={logo} alt="Dott.ssa Ilaria Golino Logo" className="w-11 h-11 rounded-full" />
           <div className="flex flex-col">
             <span className="text-lg font-serif font-semibold text-foreground tracking-wide">
               Dott.ssa Ilaria Golino

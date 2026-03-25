@@ -3,7 +3,8 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const RECIPIENT = "Ilaria.golino3@gmail.com";
+const RECIPIENT = "p.meloni14@gmail.com";
+const FROM = "Dott.ssa Ilaria Golino <onboarding@resend.dev>";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
@@ -17,8 +18,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    // Email notification to the therapist
     await resend.emails.send({
-      from: "Sito Web <noreply@ilariagolino.it>",
+      from: FROM,
       to: RECIPIENT,
       replyTo: email,
       subject: `Nuova richiesta colloquio — ${motivo || "Primo contatto"}`,
@@ -57,6 +59,41 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           ` : ""}
           <p style="color: #999; font-size: 12px; margin-top: 30px;">
             Inviato dal form di contatto su ilariagolino.it
+          </p>
+        </div>
+      `,
+    });
+
+    // Confirmation email to the user
+    await resend.emails.send({
+      from: FROM,
+      to: email,
+      subject: "Ho ricevuto la tua richiesta — Dott.ssa Ilaria Golino",
+      html: `
+        <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h2 style="color: #8B6F5E; border-bottom: 2px solid #E8D5C4; padding-bottom: 12px;">
+            Grazie per avermi contattata, ${escapeHtml(nome)}
+          </h2>
+          <p style="color: #5C4A3A; line-height: 1.7; margin: 20px 0;">
+            Ho ricevuto la tua richiesta e ti risponderò il prima possibile, di solito entro 24 ore.
+          </p>
+          <p style="color: #5C4A3A; line-height: 1.7; margin: 20px 0;">
+            Nel frattempo, se preferisci puoi anche scrivermi direttamente su WhatsApp per una risposta più rapida:
+          </p>
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="https://wa.me/393515499417" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold;">
+              Scrivimi su WhatsApp
+            </a>
+          </div>
+          <p style="color: #5C4A3A; line-height: 1.7;">
+            A presto,<br />
+            <strong>Dott.ssa Ilaria Golino</strong><br />
+            <span style="color: #999; font-size: 14px;">Psicologa Psicoterapeuta — Analista Transazionale</span>
+          </p>
+          <hr style="border: none; border-top: 1px solid #E8D5C4; margin: 30px 0;" />
+          <p style="color: #999; font-size: 12px;">
+            Via Tuscolana 1168, 00172 Roma<br />
+            Tel: 351 549 9417
           </p>
         </div>
       `,
