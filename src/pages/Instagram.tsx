@@ -1,11 +1,10 @@
-import { useState, useRef, useCallback } from "react";
+import { useRef, useCallback, useState } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   MessageCircle,
   Play,
   Clock,
-  ChevronDown,
   Video,
 } from "lucide-react";
 
@@ -28,8 +27,7 @@ const videos: Video[] = [
   { id: "cakxj-sokmz", title: "Crescita personale e consapevolezza", topic: "Crescita personale", src: "/videos/cakxj-sokmz.mp4", instagramUrl: "https://www.instagram.com/reel/Cakxj-sokmz/", durationLabel: "18 sec" },
   { id: "czppjdtjvvw", title: "Confini emotivi", topic: "Relazioni", src: "/videos/czppjdtjvvw.mp4", instagramUrl: "https://www.instagram.com/reel/CZpPjdTJvvw/", durationLabel: "10 sec" },
   { id: "czkgb8cgxit", title: "Segnali da non ignorare", topic: "Dipendenza affettiva", src: "/videos/czkgb8cgxit.mp4", instagramUrl: "https://www.instagram.com/reel/CZkGb8cgXIT/", durationLabel: "10 sec" },
-  { id: "czhtm4cbpsh", title: "Approfondimento da ascoltare con calma", topic: "Approfondimenti", src: "/videos/czhtm4cbpsh.mp4", instagramUrl: "https://www.instagram.com/reel/CZhtm4CBpSh/", durationLabel: "49 min", featured: true },
-  { id: "cyunwhthaqp", title: "Emozioni intense", topic: "Emozioni", src: "/videos/cyunwhthaqp.mp4", instagramUrl: "https://www.instagram.com/reel/CYuNWHthAqp/", durationLabel: "7 sec", poster: "/videos/cyunwhthaqp-poster.jpg" },
+{ id: "cyunwhthaqp", title: "Emozioni intense", topic: "Emozioni", src: "/videos/cyunwhthaqp.mp4", instagramUrl: "https://www.instagram.com/reel/CYuNWHthAqp/", durationLabel: "7 sec", poster: "/videos/cyunwhthaqp-poster.jpg" },
   { id: "cyrpykxht1v", title: "Autostima e crescita personale", topic: "Autostima", src: "/videos/cyrpykxht1v.mp4", instagramUrl: "https://www.instagram.com/reel/CYrpYkXht1v/", durationLabel: "52 min", featured: true },
   { id: "cyjr3_obwj4", title: "Rileggere una dinamica che fa soffrire", topic: "Relazioni", src: "/videos/cyjr3_obwj4.mp4", instagramUrl: "https://www.instagram.com/reel/CYjr3_oBwJ4/", durationLabel: "23 sec" },
   { id: "cwtk2ronx-s", title: "Quando fai troppo per l'altro", topic: "Dipendenza affettiva", src: "/videos/cwtk2ronx-s.mp4", instagramUrl: "https://www.instagram.com/reel/CWtK2RONx-s/", durationLabel: "13 sec" },
@@ -110,8 +108,6 @@ function VideoCard({ video, aspect = "portrait" }: { video: Video; aspect?: "por
 }
 
 const Instagram = () => {
-  const [showAllShorts, setShowAllShorts] = useState(false);
-  const visibleShorts = showAllShorts ? shortVideos : shortVideos.slice(0, 6);
 
   return (
     <Layout>
@@ -152,21 +148,10 @@ const Instagram = () => {
             Pillole brevi
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-            {visibleShorts.map((video) => (
+            {shortVideos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
           </div>
-          {!showAllShorts && shortVideos.length > 6 && (
-            <div className="text-center mt-8">
-              <button
-                onClick={() => setShowAllShorts(true)}
-                className="inline-flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-opacity"
-              >
-                Mostra tutti
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
