@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import { Heart, Brain, Shield, Leaf, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import ilariaGolino from "@/assets/ilaria-golino-new.jpg";
+import { useFontTheme, fontThemes } from "@/components/FontContext";
 
 
-const Index = () => (
+const Index = () => {
+  const { themeIndex, cycleFont } = useFontTheme();
+  return (
   <Layout>
     <SEO path="/" />
     {/* Hero */}
@@ -56,11 +59,16 @@ const Index = () => (
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <img
-              src={ilariaGolino}
-              alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
-              className="w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-3xl shadow-float object-cover"
-            />
+            <div className="relative cursor-pointer group" onClick={cycleFont} title="Clicca per cambiare font">
+              <img
+                src={ilariaGolino}
+                alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
+                className="w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-3xl shadow-float object-cover group-hover:ring-4 group-hover:ring-primary/20 transition-all"
+              />
+              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-foreground/80 text-background text-xs px-3 py-1.5 rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                Font: {fontThemes[themeIndex].label}
+              </span>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -361,4 +369,7 @@ const Index = () => (
   </Layout>
 );
 
+}
+
 export default Index;
+

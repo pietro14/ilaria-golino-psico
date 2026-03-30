@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { FontProvider } from "@/components/FontContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "@/pages/Index";
 import ChiSono from "@/pages/ChiSono";
@@ -22,6 +23,7 @@ import NotFound from "@/pages/NotFound";
 
 const App = () => (
   <HelmetProvider>
+  <FontProvider>
   <BrowserRouter>
     <ScrollToTop />
     <Routes>
@@ -45,6 +47,7 @@ const App = () => (
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
+  </FontProvider>
   </HelmetProvider>
 );
 
