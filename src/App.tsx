@@ -11,6 +11,7 @@ import DomandeRisposte from "@/pages/DomandeRisposte";
 import Instagram from "@/pages/Instagram";
 import Studio from "@/pages/Studio";
 import Approfondimenti from "@/pages/Approfondimenti";
+import BlogArticle from "@/pages/BlogArticle";
 import Contatti from "@/pages/Contatti";
 import QuizFaccioAlCasoTuo from "@/pages/tools/QuizFaccioAlCasoTuo";
 import CalcolatoreCosto from "@/pages/tools/CalcolatoreCosto";
@@ -34,6 +35,7 @@ const App = () => (
       <Route path="/video" element={<Instagram />} />
       <Route path="/studio" element={<Studio />} />
       <Route path="/approfondimenti" element={<Approfondimenti />} />
+      <Route path="/blog/:slug" element={<BlogArticle />} />
       <Route path="/contatti" element={<Contatti />} />
       <Route path="/quiz" element={<QuizFaccioAlCasoTuo />} />
       <Route path="/calcolatore-costo-terapia" element={<CalcolatoreCosto />} />

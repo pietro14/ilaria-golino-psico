@@ -1,13 +1,18 @@
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
-import { BookOpen, MessageCircle } from "lucide-react";
+import { Clock, ArrowRight, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { blogArticles } from "@/data/blogArticles";
 
 const Approfondimenti = () => (
   <Layout>
-    <SEO title="Approfondimenti" description="Articoli e approfondimenti su psicologia, relazioni e crescita personale." path="/approfondimenti" />
-    {/* Hero */}
+    <SEO
+      title="Blog - Approfondimenti"
+      description="Articoli su dipendenza affettiva, ansia, relazioni tossiche, disturbi alimentari e benessere psicologico. Risorse gratuite della Dott.ssa Ilaria Golino, psicoterapeuta a Roma."
+      path="/approfondimenti"
+    />
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
         <motion.div
@@ -17,50 +22,64 @@ const Approfondimenti = () => (
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <p className="font-script italic text-2xl text-primary">Articoli e risorse</p>
-          <h1 className="text-4xl md:text-5xl font-serif text-foreground">Approfondimenti</h1>
+          <h1 className="text-4xl md:text-5xl font-serif text-foreground">Blog</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Contenuti per aiutarti a comprendere meglio te stessa e le tue relazioni.
+            Approfondimenti su psicologia, relazioni, emozioni e benessere per aiutarti a comprendere meglio te stesso/a.
           </p>
         </motion.div>
       </div>
     </section>
 
-    {/* Coming soon */}
-    <section className="section-padding bg-card">
-      <div className="container-narrow">
+    <section className="section-padding bg-background">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogArticles.map((article, i) => (
+            <AnimatedSection key={article.slug} delay={i * 0.05}>
+              <Link
+                to={`/blog/${article.slug}`}
+                className="block bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 hover:shadow-elevated transition-all duration-300 h-full group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                    <span>{article.date}</span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {article.readTime} min
+                    </span>
+                  </div>
+                  <h2 className="text-lg font-serif font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+                    {article.title}
+                  </h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                    {article.metaDescription}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-primary text-sm font-medium">
+                    Leggi l'articolo <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="section-padding bg-secondary/40">
+      <div className="container-narrow text-center space-y-6">
         <AnimatedSection>
-          <div className="bg-background rounded-2xl p-8 md:p-12 text-center space-y-6 max-w-2xl mx-auto">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-              <BookOpen className="w-8 h-8 text-primary" />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-serif text-foreground">In arrivo</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Sto preparando articoli e risorse su dipendenza affettiva, relazioni, emozioni e benessere
-              psicologico. Presto troverai qui contenuti utili per approfondire le tematiche di cui mi occupo.
-            </p>
-            <div className="space-y-4 pt-4">
-              <p className="text-foreground font-medium">Nel frattempo, puoi seguirmi su Instagram o scrivermi direttamente:</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://www.instagram.com/ilariagolino.psicologa/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
-                >
-                  Seguimi su Instagram
-                </a>
-                <a
-                  href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Scrivimi su WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl font-serif text-foreground">Hai bisogno di un supporto personalizzato?</h2>
+          <p className="text-muted-foreground mt-4">
+            Gli articoli possono aiutarti a capire, ma ogni situazione è unica. Scrivimi per un appuntamento.
+          </p>
+          <a
+            href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20appuntamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated mt-6"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Scrivimi su WhatsApp
+          </a>
         </AnimatedSection>
       </div>
     </section>
