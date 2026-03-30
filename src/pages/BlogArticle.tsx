@@ -15,7 +15,12 @@ const BlogArticle = () => {
 
   return (
     <Layout>
-      <SEO title={article.title} description={article.metaDescription} path={`/blog/${article.slug}`} />
+      <SEO
+        title={article.title}
+        description={article.metaDescription}
+        path={`/blog/${article.slug}`}
+        article={{ datePublished: "2026-03-30", author: "Dott.ssa Ilaria Golino" }}
+      />
       <section className="section-padding bg-warm-blush">
         <div className="container-narrow">
           <motion.div
@@ -66,7 +71,6 @@ const BlogArticle = () => {
         </div>
       </section>
 
-      {/* Author + CTA */}
       <section className="section-padding bg-card">
         <div className="container-narrow">
           <AnimatedSection>

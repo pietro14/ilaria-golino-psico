@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => (
   <Layout>
-    <SEO title="Pagina non trovata" description="La pagina che cerchi non esiste." />
+    <SEO title="Pagina non trovata" description="La pagina che cerchi non esiste." noindex />
     <section className="section-padding bg-warm-blush min-h-[60vh] flex items-center">
       <div className="container-narrow text-center space-y-6">
         <h1 className="text-6xl font-serif text-primary">404</h1>
