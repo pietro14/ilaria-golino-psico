@@ -82,47 +82,46 @@ const Contatti = () => (
         </div>
       </section>
 
-      {/* WhatsApp CTA */}
-      <section className="section-padding bg-card">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <div className="rounded-2xl bg-[#25D366] p-8 md:p-10 text-center text-white space-y-4 shadow-elevated">
-              <MessageCircle className="w-12 h-12 mx-auto" />
-              <h2 className="text-2xl md:text-3xl font-serif font-bold">
-                Scrivimi su WhatsApp
-              </h2>
-              <p className="text-white/90 max-w-lg mx-auto">
-                Il modo più veloce per contattarmi. Rispondero il prima possibile, di solito entro poche ore.
-              </p>
-              <a
-                href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] px-8 py-4 rounded-2xl font-semibold hover:bg-white/90 transition-colors shadow-lg mt-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Apri WhatsApp
-              </a>
-              <p className="text-white/70 text-sm">+39 351 549 9417</p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Booking form */}
+      {/* Contact options: WhatsApp + Form side by side */}
       <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground text-center mb-4">
-              Richiedi un appuntamento
-            </h2>
-            <p className="text-center text-muted-foreground mb-10 max-w-lg mx-auto">
-              Compila il modulo e ti ricontatterò per fissare il primo appuntamento.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1}>
-            <ContactForm />
-          </AnimatedSection>
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* WhatsApp */}
+            <AnimatedSection>
+              <div className="rounded-2xl bg-[#25D366] p-6 md:p-8 text-center text-white space-y-4 shadow-elevated h-full flex flex-col justify-center">
+                <MessageCircle className="w-10 h-10 mx-auto" />
+                <h2 className="text-xl md:text-2xl font-serif font-bold">
+                  Scrivimi su WhatsApp
+                </h2>
+                <p className="text-white/90 text-sm md:text-base">
+                  Il modo più veloce per contattarmi. Risponderò il prima possibile, di solito entro poche ore.
+                </p>
+                <a
+                  href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] px-6 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-colors shadow-lg"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Apri WhatsApp
+                </a>
+                <p className="text-white/70 text-sm">+39 351 549 9417</p>
+              </div>
+            </AnimatedSection>
+
+            {/* Contact form */}
+            <AnimatedSection delay={0.1}>
+              <div className="rounded-2xl bg-card p-6 md:p-8 border border-border/50 shadow-elevated h-full">
+                <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-2">
+                  Richiedi un appuntamento
+                </h2>
+                <p className="text-center text-muted-foreground mb-6 text-sm md:text-base">
+                  Compila il modulo e ti ricontatterò per fissare il primo appuntamento.
+                </p>
+                <ContactForm />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
