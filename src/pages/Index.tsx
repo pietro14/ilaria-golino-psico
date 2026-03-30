@@ -57,11 +57,11 @@ const Index = () => (
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="absolute -inset-4 bg-warm-blush/40 rounded-full -rotate-3" />
+              <div className="absolute -inset-6 bg-warm-blush/40 rounded-full -rotate-3" />
               <img
                 src={ilariaGolino}
                 alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
-                className="relative w-72 h-72 md:w-96 md:h-96 object-cover object-top rounded-full shadow-float"
+                className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] object-cover object-top rounded-full shadow-float"
               />
             </div>
           </motion.div>

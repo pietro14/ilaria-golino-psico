@@ -120,7 +120,7 @@ const Navbar = () => {
             <img
               src={logos[logoIndex]}
               alt="Dott.ssa Ilaria Golino Logo"
-              className="w-11 h-11 rounded-full cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all"
+              className="w-12 h-12 rounded-full cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all"
               onClick={handleLogoImgClick}
               title="Clicca per cambiare logo"
             />
