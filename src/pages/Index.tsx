@@ -3,9 +3,9 @@ import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
-import { Heart, Brain, Shield, Leaf, Sparkles, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck } from "lucide-react";
+import { Heart, Brain, Shield, Leaf, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
-import ilariaGolino from "@/assets/ilaria-golino.png";
+import ilariaGolino from "@/assets/ilaria-golino-new.jpg";
 
 
 const Index = () => (
@@ -22,32 +22,30 @@ const Index = () => (
             className="space-y-8 text-center lg:text-left"
           >
             <p className="font-script italic text-2xl text-primary">
-              Ti meriti relazioni che ti facciano stare bene
+              Uno spazio sicuro per prenderti cura di te
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-foreground">
-              Psicoterapeuta per{" "}
-              <span className="text-primary italic">dipendenza affettiva</span>{" "}
-              e difficoltà relazionali
+              Psicoterapeuta a Roma{" "}
+              <span className="text-primary italic">e online</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Se ti senti intrappolata in relazioni che ti fanno soffrire, se hai paura dell'abbandono
-              o se fai fatica a stare da sola, posso aiutarti a costruire un modo più sano di vivere le relazioni.
+              A volte non serve iniziare subito un percorso lungo. A volte basta uno spazio per fermarsi, pensare e fare chiarezza. Ti accompagno con sedute singole mirate o percorsi di psicoterapia personalizzati.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <a
-                href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
+                href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20appuntamento."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
               >
                 <MessageCircle className="w-5 h-5" />
-                Prenota un colloquio conoscitivo
+                Prenota un appuntamento
               </a>
               <Link
-                to="/aree-intervento"
+                to="/servizi#sst"
                 className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
               >
-                Scopri come posso aiutarti
+                Scopri la Seduta Singola
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -63,7 +61,7 @@ const Index = () => (
               <img
                 src={ilariaGolino}
                 alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
-                className="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-float"
+                className="relative w-72 h-72 md:w-96 md:h-96 object-cover object-top rounded-full shadow-float"
               />
             </div>
           </motion.div>
@@ -71,8 +69,44 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Ti riconosci */}
+    {/* SST Highlight */}
     <section className="section-padding bg-card">
+      <div className="container-wide">
+        <AnimatedSection>
+          <div className="max-w-4xl mx-auto bg-background rounded-2xl p-8 md:p-12 border border-primary/20 shadow-elevated">
+            <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
+              <div className="flex justify-center">
+                <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Zap className="w-10 h-10 text-primary" />
+                </div>
+              </div>
+              <div className="space-y-4 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-serif text-foreground">
+                  Seduta Singola di Consulenza Psicologica
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Un incontro intensivo di 90-120 minuti, pensato per lavorare in modo mirato su una difficoltà specifica. Fare chiarezza, comprendere la tua situazione e trovare possibili passi concreti.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm">
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-xl font-medium">90-120 minuti</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-xl font-medium">120 €</span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-xl font-medium">In studio o online</span>
+                </div>
+                <Link
+                  to="/servizi#sst"
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-opacity mt-2"
+                >
+                  Scopri di più <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
+    {/* Ti riconosci */}
+    <section className="section-padding bg-background">
       <div className="container-wide">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -84,9 +118,9 @@ const Index = () => (
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {[
-            "Hai paura di restare sola e accetti relazioni che ti fanno stare male",
-            "Ti senti vuota o persa quando non sei in una relazione",
-            "Fai fatica a mettere confini e dici sempre di sì agli altri",
+            "Hai paura di restare solo/a e accetti relazioni che ti fanno stare male",
+            "Ti senti vuoto/a o perso/a quando non sei in una relazione",
+            "Fai fatica a mettere confini e dici sempre di sì",
             "Hai la sensazione di non valere abbastanza, di non meritare amore",
             "Il tuo umore dipende completamente da come va la relazione",
             "Ti ritrovi sempre nello stesso tipo di relazione dolorosa",
@@ -94,7 +128,7 @@ const Index = () => (
             "Le emozioni ti travolgono e fai fatica a gestirle",
           ].map((item, i) => (
             <AnimatedSection key={i} delay={i * 0.05}>
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-background hover:bg-secondary/30 transition-colors border border-border/30">
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-card hover:bg-secondary/30 transition-colors border border-border/30">
                 <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-foreground">{item}</p>
               </div>
@@ -103,8 +137,8 @@ const Index = () => (
         </div>
         <AnimatedSection>
           <p className="text-center text-muted-foreground mt-10 text-lg max-w-2xl mx-auto">
-            Se ti sei riconosciuta in anche solo una di queste frasi, sappi che{" "}
-            <span className="font-script italic text-xl text-primary">non sei sbagliata</span>.
+            Se ti riconosci in anche solo una di queste frasi, sappi che{" "}
+            <span className="font-script italic text-xl text-primary">non c'è nulla di sbagliato in te</span>.
             Hai solo bisogno di uno spazio sicuro dove capire cosa ti succede.
           </p>
         </AnimatedSection>
@@ -112,7 +146,7 @@ const Index = () => (
     </section>
 
     {/* Aree di intervento */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-card">
       <div className="container-wide">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -130,7 +164,7 @@ const Index = () => (
             { icon: Leaf, title: "Disturbi alimentari", description: "Ritrovare un rapporto sereno con il cibo e con il tuo corpo, senza giudizio." },
           ].map((area, i) => (
             <AnimatedSection key={area.title} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-7 border border-border/50 hover:border-primary/30 hover:shadow-elevated transition-all duration-300 h-full text-center space-y-4">
+              <div className="bg-background rounded-2xl p-7 border border-border/50 hover:border-primary/30 hover:shadow-elevated transition-all duration-300 h-full text-center space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto">
                   <area.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -150,19 +184,19 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Come funziona */}
+    {/* Come posso lavorare con te */}
     <section className="section-padding bg-secondary/40">
       <div className="container-wide">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-serif text-center text-foreground mb-12">
-            Come funziona il percorso
+            Come posso lavorare con te
           </h2>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
-            { step: "01", icon: MessageCircle, title: "Primo colloquio", description: "Ci conosciamo, mi racconti cosa stai vivendo. Non c'è nessun impegno: è uno spazio per capire se posso essere la professionista giusta per te." },
-            { step: "02", icon: HandHeart, title: "Il percorso insieme", description: "Sedute settimanali in un ambiente sicuro e riservato. Lavoriamo insieme sulle tue difficoltà con strumenti concreti e un ritmo che rispetta i tuoi tempi." },
-            { step: "03", icon: Sparkles, title: "Autonomia e benessere", description: "L'obiettivo è che tu possa stare bene da sola e nelle relazioni. Non creare dipendenza dalla terapia, ma costruire la tua autonomia emotiva." },
+            { step: "01", icon: Zap, title: "Seduta Singola", description: "Un incontro intensivo di 90-120 minuti per fare chiarezza su una situazione specifica, prendere una decisione o esplorare un momento di crisi. Non richiede un impegno continuativo." },
+            { step: "02", icon: HandHeart, title: "Psicoterapia", description: "Un percorso strutturato con sedute settimanali da 50 minuti. Lavoriamo insieme sulle tue difficoltà con strumenti concreti e un ritmo che rispetta i tuoi tempi." },
+            { step: "03", icon: MessageCircle, title: "Online o in studio", description: "Entrambe le modalità hanno la stessa efficacia. Scegli quella più comoda: in studio a Roma zona Cinecittà oppure in videoconsulto da dove preferisci." },
           ].map((item, i) => (
             <AnimatedSection key={item.step} delay={i * 0.15}>
               <div className="text-center space-y-4">
@@ -214,8 +248,8 @@ const Index = () => (
               </p>
               <div className="space-y-4">
                 {[
-                  "Donne e uomini che si sentono intrappolati in relazioni tossiche o di dipendenza",
-                  "Persone che vivono emozioni intense e travolgenti",
+                  "Persone che si sentono intrappolate in relazioni tossiche o di dipendenza",
+                  "Chi vive emozioni intense e travolgenti",
                   "Chi ha difficoltà con il cibo o con l'immagine corporea",
                   "Chi vuole lavorare sull'autostima e imparare a volersi bene",
                   "Persone che stanno attraversando un momento di crisi o cambiamento",
@@ -234,8 +268,8 @@ const Index = () => (
               <div className="space-y-4">
                 {[
                   { title: "In studio a Roma", sub: "Via Tuscolana 1168 - zona Cinecittà" },
-                  { title: "Online in videoconsulto", sub: "Comodamente da casa tua, stessa efficacia" },
-                  { title: "Sedute settimanali da 50 minuti", sub: "Con frequenza e durata personalizzate" },
+                  { title: "Online in videoconsulto", sub: "Comodamente da casa, stessa efficacia" },
+                  { title: "Seduta singola o percorso continuativo", sub: "In base alle tue esigenze e ai tuoi obiettivi" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
@@ -295,7 +329,7 @@ const Index = () => (
             Richiedi un appuntamento
           </h2>
           <p className="text-center text-muted-foreground mb-10 max-w-lg mx-auto">
-            Compila il modulo e ti ricontatterò per fissare il primo colloquio conoscitivo.
+            Compila il modulo e ti ricontatterò per fissare un appuntamento.
           </p>
         </AnimatedSection>
         <AnimatedSection delay={0.1}>
@@ -316,7 +350,7 @@ const Index = () => (
             insieme capiremo se posso esserti d'aiuto.
           </p>
           <a
-            href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
+            href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20appuntamento."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated text-lg mt-6"

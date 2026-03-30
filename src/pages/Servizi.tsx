@@ -1,13 +1,13 @@
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
-import { MapPin, Monitor, Zap, Euro, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Monitor, Zap, Euro, Clock, MessageCircle, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Servizi = () => (
   <Layout>
-    <SEO title="Servizi" description="Psicoterapia individuale, di coppia e online. Sedute da 50 minuti in studio a Roma o in videoconsulto." path="/servizi" />
+    <SEO title="Servizi" description="Seduta Singola di Consulenza Psicologica, psicoterapia individuale in studio a Roma e online. Scopri i servizi e i costi." path="/servizi" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
@@ -20,17 +20,98 @@ const Servizi = () => (
           <p className="font-script italic text-2xl text-primary">Come posso lavorare con te</p>
           <h1 className="text-4xl md:text-5xl font-serif text-foreground">I miei servizi</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Offro percorsi di psicoterapia in presenza e online, oltre a sedute singole per esigenze specifiche.
+            Offro sedute singole di consulenza psicologica e percorsi di psicoterapia, in presenza a Roma e online.
           </p>
         </motion.div>
       </div>
     </section>
 
-    {/* Psicoterapia in presenza */}
-    <section className="section-padding bg-card">
+    {/* SST - PRIMO SERVIZIO */}
+    <section id="sst" className="section-padding bg-card">
       <div className="container-narrow">
         <AnimatedSection>
-          <div className="bg-background rounded-2xl p-6 md:p-8 space-y-6">
+          <div className="bg-background rounded-2xl p-6 md:p-10 space-y-8 border border-primary/20 shadow-elevated">
+            <div className="flex items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Zap className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-serif text-foreground">Seduta Singola di Consulenza Psicologica</h2>
+                <p className="text-muted-foreground mt-1">90-120 minuti &mdash; Un incontro intensivo e mirato</p>
+              </div>
+            </div>
+
+            <div className="space-y-4 text-foreground leading-relaxed">
+              <p className="font-script italic text-xl text-primary">
+                &ldquo;A volte non serve iniziare subito un percorso lungo. A volte basta uno spazio per fermarsi, pensare e fare chiarezza.&rdquo;
+              </p>
+              <p>
+                La Seduta Singola di Consulenza Psicologica &egrave; un incontro intensivo di <strong>90-120 minuti</strong>,
+                pensato per lavorare in modo mirato su una difficolt&agrave; specifica. Durante la seduta esploreremo insieme
+                la situazione che stai vivendo, individueremo schemi, dinamiche e punti di forza, e ti aiuter&ograve; a trovare
+                nuove prospettive e possibilit&agrave; di cambiamento.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-foreground mb-3">Per chi &egrave; utile:</p>
+              <ul className="space-y-2 ml-1">
+                {[
+                  "Stai vivendo un momento di confusione o blocco",
+                  "Devi prendere una decisione importante",
+                  "Vuoi comprendere meglio una dinamica relazionale",
+                  "Stai attraversando un momento di crisi o cambiamento",
+                  "Desideri uno spazio di riflessione senza necessariamente iniziare un percorso continuativo",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-foreground mb-3">Cosa puoi ottenere:</p>
+              <ul className="space-y-2 ml-1">
+                {[
+                  "Fare chiarezza su un problema o una decisione",
+                  "Riconoscere schemi ricorrenti e dinamiche personali",
+                  "Uscire con idee concrete e un nuovo punto di vista",
+                  "Vivere un incontro intenso e mirato, senza impegnarti in un percorso lungo",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Zap className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-2">
+              <div className="bg-primary/10 rounded-xl px-5 py-3 text-center">
+                <p className="text-2xl font-serif font-bold text-primary">120&euro;</p>
+                <p className="text-xs text-muted-foreground">a seduta</p>
+              </div>
+              <div className="bg-primary/10 rounded-xl px-5 py-3 text-center">
+                <p className="text-2xl font-serif font-bold text-primary">90-120</p>
+                <p className="text-xs text-muted-foreground">minuti</p>
+              </div>
+              <div className="bg-primary/10 rounded-xl px-5 py-3 text-center">
+                <p className="text-2xl font-serif font-bold text-primary">In studio</p>
+                <p className="text-xs text-muted-foreground">o online</p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
+    {/* Psicoterapia in presenza */}
+    <section className="section-padding bg-background">
+      <div className="container-narrow">
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl p-6 md:p-8 space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-7 h-7 text-primary" />
@@ -57,17 +138,17 @@ const Servizi = () => (
     </section>
 
     {/* Psicoterapia online */}
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-card">
       <div className="container-narrow">
         <AnimatedSection>
-          <div className="bg-card rounded-2xl p-6 md:p-8 space-y-6">
+          <div className="bg-background rounded-2xl p-6 md:p-8 space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Monitor className="w-7 h-7 text-primary" />
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-serif text-foreground">Psicoterapia online</h2>
-                <p className="text-muted-foreground mt-1">Comodamente da casa tua, ovunque tu sia</p>
+                <p className="text-muted-foreground mt-1">Comodamente da casa, ovunque tu sia</p>
               </div>
             </div>
             <div className="space-y-4 text-foreground leading-relaxed">
@@ -77,50 +158,9 @@ const Servizi = () => (
               </p>
               <p>
                 Questa modalit&agrave; &egrave; ideale se vivi fuori Roma, hai difficolt&agrave; a spostarti, hai
-                orari complessi o semplicemente preferisci la comodit&agrave; di fare terapia da casa tua.
+                orari complessi o semplicemente preferisci la comodit&agrave; di fare terapia da casa.
                 Ti serve solo una connessione stabile e uno spazio privato e tranquillo.
               </p>
-            </div>
-          </div>
-        </AnimatedSection>
-      </div>
-    </section>
-
-    {/* SST */}
-    <section id="sst" className="section-padding bg-card">
-      <div className="container-narrow">
-        <AnimatedSection>
-          <div className="bg-background rounded-2xl p-6 md:p-8 space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Zap className="w-7 h-7 text-primary" />
-              </div>
-              <div>
-                <h2 className="text-2xl md:text-3xl font-serif text-foreground">SST &mdash; Single Session Therapy</h2>
-                <p className="text-muted-foreground mt-1">Una seduta mirata per un problema specifico</p>
-              </div>
-            </div>
-            <div className="space-y-4 text-foreground leading-relaxed">
-              <p>
-                La <strong>Single Session Therapy</strong> &egrave; una singola seduta strutturata per affrontare un
-                problema circoscritto. Non sostituisce la psicoterapia, ma pu&ograve; essere molto utile in
-                situazioni specifiche.
-              </p>
-              <p className="font-semibold">Quando pu&ograve; essere utile:</p>
-              <ul className="space-y-2 ml-1">
-                {[
-                  "Hai bisogno di chiarezza su una situazione specifica",
-                  "Stai attraversando un momento di crisi",
-                  "Devi prendere una decisione importante",
-                  "Vuoi uno sguardo professionale su un problema preciso",
-                  "Vuoi capire se la psicoterapia fa per te prima di iniziare un percorso",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Zap className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </AnimatedSection>
@@ -137,21 +177,21 @@ const Servizi = () => (
           {[
             {
               icon: Euro,
-              title: "Costo: 60\u20AC a seduta",
+              title: "Costi",
               description:
-                "Una tariffa accessibile e trasparente. La fattura sanitaria \u00e8 detraibile nella dichiarazione dei redditi.",
+                "Psicoterapia: 60\u20AC a seduta (50 min). Seduta Singola: 120\u20AC (90-120 min). La fattura sanitaria \u00e8 detraibile nella dichiarazione dei redditi.",
             },
             {
               icon: Clock,
-              title: "Frequenza settimanale",
+              title: "Frequenza",
               description:
-                "Le sedute hanno cadenza settimanale e durano 50 minuti. La regolarit\u00e0 \u00e8 fondamentale per un percorso efficace.",
+                "La psicoterapia prevede sedute settimanali da 50 minuti. La Seduta Singola \u00e8 un unico incontro intensivo, senza impegno continuativo.",
             },
             {
               icon: MessageCircle,
-              title: "Primo colloquio",
+              title: "Primo appuntamento",
               description:
-                "Il primo incontro serve a conoscerci e capire se posso aiutarti. Non \u00e8 vincolante e ha lo stesso costo di una seduta regolare.",
+                "Il primo incontro serve a conoscerci e capire quale servizio \u00e8 pi\u00f9 adatto a te. Ha lo stesso costo di una seduta regolare.",
             },
           ].map((item, i) => (
             <AnimatedSection key={item.title} delay={i * 0.15}>
@@ -172,9 +212,9 @@ const Servizi = () => (
     <section className="section-padding bg-secondary/40">
       <div className="container-narrow text-center space-y-6">
         <AnimatedSection>
-          <h2 className="text-3xl font-serif text-foreground">Pronta a iniziare?</h2>
+          <h2 className="text-3xl font-serif text-foreground">Vuoi fare il primo passo?</h2>
           <p className="text-muted-foreground mt-4">
-            Scrivimi su WhatsApp per prenotare un primo colloquio conoscitivo o per qualsiasi domanda.
+            Scrivimi su WhatsApp per prenotare un appuntamento o per qualsiasi domanda.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <a

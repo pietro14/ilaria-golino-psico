@@ -263,7 +263,7 @@ const Approccio = () => (
         <AnimatedSection>
           <h2 className="text-3xl font-serif text-foreground">Vuoi iniziare un percorso?</h2>
           <p className="text-muted-foreground mt-4">
-            Scrivimi senza impegno per un primo colloquio conoscitivo. Insieme capiremo se il mio approccio fa per te.
+            Scrivimi per un primo appuntamento. Insieme capiremo se il mio approccio fa per te.
           </p>
           <a
             href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20sul%20suo%20approccio%20terapeutico."

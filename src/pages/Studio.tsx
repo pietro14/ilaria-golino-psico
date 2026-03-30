@@ -229,7 +229,7 @@ const Studio = () => (
         <AnimatedSection>
           <h2 className="text-3xl font-serif text-foreground">Vuoi venire a trovarmi?</h2>
           <p className="text-muted-foreground mt-4">
-            Scrivimi per prenotare un primo colloquio conoscitivo, in studio o online.
+            Scrivimi per prenotare un primo appuntamento, in studio o online.
           </p>
           <a
             href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20prenotare%20un%20primo%20colloquio."

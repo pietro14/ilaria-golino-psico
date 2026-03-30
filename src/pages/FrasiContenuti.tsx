@@ -338,7 +338,7 @@ const FrasiContenuti = () => {
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
               Se qualcuna di queste parole ha risuonato in te, forse è il momento
-              di fare il prossimo passo. Scrivimi per un primo colloquio conoscitivo.
+              di fare il prossimo passo. Scrivimi per un primo appuntamento.
             </p>
             <a
               href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20ho%20letto%20le%20sue%20frasi%20sul%20sito%20e%20vorrei%20informazioni%20per%20un%20primo%20colloquio."

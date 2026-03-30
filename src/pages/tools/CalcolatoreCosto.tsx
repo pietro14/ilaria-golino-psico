@@ -154,7 +154,7 @@ const CalcolatoreCosto = () => {
           <AnimatedSection>
             <div className="text-center space-y-4">
               <p className="text-muted-foreground">
-                Il primo colloquio conoscitivo serve per capire insieme se posso
+                Il primo appuntamento serve per capire insieme se posso
                 esserti d'aiuto. Nessun impegno.
               </p>
               <a

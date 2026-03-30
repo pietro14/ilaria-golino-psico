@@ -15,7 +15,7 @@ const aree = [
       "Terrore dell'abbandono che ti porta ad accettare qualsiasi cosa",
       "Bisogno costante di rassicurazioni dal partner",
       "Perdita della propria identità nella relazione",
-      "Difficoltà a stare da sola senza sentirsi vuota",
+      "Difficoltà a stare da soli senza sentirsi vuoti",
       "Relazioni con partner emotivamente non disponibili",
       "Gelosia intensa e controllo ossessivo",
       "Mettere sempre i bisogni dell'altro prima dei propri",
@@ -125,7 +125,7 @@ const faq = [
 ];
 
 const quandoChiedereAiuto = [
-  "La sofferenza dura da tempo e non riesci a gestirla da sola",
+  "La sofferenza dura da tempo e non riesci a gestirla da solo/a",
   "Le tue relazioni seguono sempre lo stesso schema doloroso",
   "Le emozioni ti travolgono e condizionano la tua vita quotidiana",
   "Il rapporto con il cibo o con il tuo corpo è diventato un problema",
@@ -234,7 +234,7 @@ const AreeIntervento = () => (
       <div className="container-narrow text-center space-y-6">
         <AnimatedSection>
           <h2 className="text-3xl font-serif text-foreground">Riconosci qualcosa di tuo?</h2>
-          <p className="text-muted-foreground mt-4">Il primo passo è il più difficile, ma non devi farlo da sola. Scrivimi per un primo colloquio conoscitivo.</p>
+          <p className="text-muted-foreground mt-4">Il primo passo è il più difficile, ma non devi farlo da solo/a. Scrivimi per un primo appuntamento.</p>
           <a href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20sulle%20aree%20di%20intervento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated mt-6">
             <MessageCircle className="w-5 h-5" />
             Scrivimi su WhatsApp

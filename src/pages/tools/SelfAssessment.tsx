@@ -16,7 +16,7 @@ const relazioniStatements = [
   "Ho paura di essere abbandonata e faccio di tutto per evitarlo",
   "Il mio umore dipende quasi interamente dalla relazione con il partner",
   "Tendo a mettere sempre i bisogni dell'altro prima dei miei",
-  "Mi sento vuota o persa quando non sono in una relazione",
+  "Mi sento vuoto/a o perso/a quando non sono in una relazione",
   "Accetto comportamenti che mi fanno stare male pur di non perdere l'altro",
   "Sono molto gelosa e ho bisogno di continue rassicurazioni",
   "Mi ritrovo spesso nello stesso tipo di relazione dolorosa",
@@ -82,7 +82,7 @@ function getResultLevel(score: number, maxScore: number, tab: string): ResultLev
     message:
       tab === "relazioni"
         ? "Le tue risposte suggeriscono la presenza di dinamiche relazionali significative che probabilmente ti stanno causando molta sofferenza. Un percorso di psicoterapia potrebbe aiutarti a comprendere e trasformare questi schemi. Non sei sola in questo."
-        : "Le tue risposte suggeriscono un rapporto con il cibo che merita attenzione professionale. Non è colpa tua e non devi affrontare questo da sola. Un percorso mirato può fare una grande differenza.",
+        : "Le tue risposte suggeriscono un rapporto con il cibo che merita attenzione professionale. Non è colpa tua e non devi affrontare questo da solo/a. Un percorso mirato può fare una grande differenza.",
   };
 }
 

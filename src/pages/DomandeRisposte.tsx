@@ -243,7 +243,7 @@ const DomandeRisposte = () => {
               Vuoi parlarne di persona?
             </h2>
             <p className="text-muted-foreground mt-4">
-              Se ti sei riconosciuta in una di queste domande, scrivimi senza impegno per un primo colloquio conoscitivo.
+              Se ti riconosci in una di queste domande, scrivimi senza impegno per un primo appuntamento.
             </p>
             <a
               href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20ho%20letto%20le%20domande%20e%20risposte%20sul%20suo%20sito%20e%20vorrei%20parlarne%20con%20lei."

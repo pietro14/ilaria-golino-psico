@@ -21,7 +21,7 @@ const templates: TemplateMessage[] = [
   {
     title: "Difficoltà relazionali",
     category: "Difficoltà relazionali",
-    text: "Buongiorno Dott.ssa Golino, sto vivendo un momento di grande difficoltà nella mia relazione e sento il bisogno di parlare con un professionista. Vorrei fissare un primo colloquio per capire come poter affrontare questa situazione.",
+    text: "Buongiorno Dott.ssa Golino, sto vivendo un momento di grande difficoltà nella mia relazione e sento il bisogno di parlare con un professionista. Vorrei fissare un primo appuntamento per capire come poter affrontare questa situazione.",
   },
   {
     title: "Disturbi alimentari",
@@ -61,7 +61,7 @@ const CopyButton = ({ text }: { text: string }) => {
 
 const Contatti = () => (
     <Layout>
-      <SEO title="Contatti" description="Contattami per un primo colloquio conoscitivo. Studio in Via Tuscolana 1168, Roma. WhatsApp: 351 549 9417." path="/contatti" />
+      <SEO title="Contatti" description="Contattami per un primo appuntamento. Studio in Via Tuscolana 1168, Roma. WhatsApp: 351 549 9417." path="/contatti" />
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-wide">
@@ -76,7 +76,7 @@ const Contatti = () => (
               Parliamone insieme
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Il primo passo è il più importante. Scrivimi senza impegno per fissare un primo colloquio conoscitivo.
+              Il primo passo è il più importante. Scrivimi per fissare un primo appuntamento.
             </p>
           </motion.div>
         </div>
@@ -117,7 +117,7 @@ const Contatti = () => (
               Richiedi un appuntamento
             </h2>
             <p className="text-center text-muted-foreground mb-10 max-w-lg mx-auto">
-              Compila il modulo e ti ricontatterò per fissare il primo colloquio conoscitivo.
+              Compila il modulo e ti ricontatterò per fissare il primo appuntamento.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -247,7 +247,7 @@ const Contatti = () => (
       <section className="section-padding bg-secondary/40">
         <div className="container-narrow text-center space-y-6">
           <AnimatedSection>
-            <h2 className="text-3xl font-serif text-foreground">Pronta a fare il primo passo?</h2>
+            <h2 className="text-3xl font-serif text-foreground">Il primo passo è il più importante?</h2>
             <p className="text-muted-foreground mt-4">
               Non c'è un momento perfetto per iniziare. C'è solo il momento in cui decidi di prenderti cura di te.
             </p>

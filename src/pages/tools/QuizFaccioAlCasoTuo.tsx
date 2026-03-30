@@ -79,7 +79,7 @@ function getResult(answers: number[]) {
     return {
       title: "Posso orientarti verso il professionista giusto",
       message:
-        "Dalla tua descrizione, la tua situazione potrebbe richiedere un tipo di intervento diverso dal mio ambito di specializzazione. Questo non significa che non posso aiutarti: posso consigliarti un collega o una struttura più adatti alle tue esigenze specifiche. Scrivimi senza impegno e ti orienterò verso il percorso più indicato per te.",
+        "Dalla tua descrizione, la tua situazione potrebbe richiedere un tipo di intervento diverso dal mio ambito di specializzazione. Questo non significa che non posso aiutarti: posso consigliarti un collega o una struttura più adatti alle tue esigenze specifiche. Scrivimi e ti orienterò verso il percorso più indicato per te.",
       whatsappText:
         "Buongiorno Dott.ssa Golino, ho fatto il quiz sul suo sito e vorrei un orientamento verso il professionista più adatto alla mia situazione.",
       isFuoriCampo: true,

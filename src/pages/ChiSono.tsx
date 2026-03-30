@@ -3,7 +3,6 @@ import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { GraduationCap, Award, Heart, MessageCircle, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import ilariaGolino from "@/assets/ilaria-golino.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const ChiSono = () => (
@@ -25,14 +24,9 @@ const ChiSono = () => (
     <section className="section-padding bg-card">
       <div className="container-narrow space-y-8">
         <AnimatedSection>
-          <div className="flex justify-center mb-8">
-            <img src={ilariaGolino} alt="Dott.ssa Ilaria Golino" className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-elevated" style={{ transform: "scaleX(-1)" }} />
-          </div>
-        </AnimatedSection>
-        <AnimatedSection>
           <div className="space-y-6 text-foreground leading-relaxed">
             <p>Sono Ilaria Golino, Psicologa Psicoterapeuta e <strong>Analista Transazionale Certificata (CTA)</strong>, membro dell'EATA (European Association for Transactional Analysis). Ricevo nel mio studio privato a Roma e online.</p>
-            <p>Mi sono specializzata in <strong>Analisi Transazionale integrata</strong>, un approccio che mette al centro la relazione tra terapeuta e paziente e lavora su come ci relazioniamo con noi stessi e con gli altri. Lavoro principalmente con persone che vivono <strong>difficoltà nelle relazioni</strong>: chi si ritrova sempre in legami dolorosi, chi ha paura dell'abbandono, chi fa fatica a stare da solo o chi sente di non valere abbastanza.</p>
+            <p>Mi sono specializzata in <strong>Analisi Transazionale integrata</strong>, un approccio che mette al centro la relazione tra terapeuta e paziente e lavora su come ci relazioniamo con noi stessi e con gli altri. Lavoro principalmente con persone che vivono <strong>difficoltà nelle relazioni</strong>: chi si ritrova sempre in legami dolorosi, chi ha paura dell'abbandono, chi fa fatica a stare da solo/a o chi sente di non valere abbastanza.</p>
             <p>Mi occupo anche di <strong>disturbo borderline di personalità</strong>, <strong>disturbi alimentari</strong> e di <strong>orientamento professionale</strong>, aiutando le persone a ritrovare direzione e motivazione nel proprio percorso lavorativo.</p>
             <p>Credo che ogni persona abbia in sé le risorse per cambiare. Il mio compito è creare uno spazio sicuro dove poterle scoprire insieme, senza giudizio e con i tuoi tempi.</p>
           </div>
@@ -105,10 +99,11 @@ const ChiSono = () => (
           {[
             { q: "Qual è la differenza tra psicologa e psicoterapeuta?", a: "La psicologa ha una laurea in psicologia e l'abilitazione. La psicoterapeuta ha inoltre completato una specializzazione di 4 anni che la abilita a fare psicoterapia, ovvero un percorso più profondo e strutturato. Io sono entrambe." },
             { q: "Cos'è l'Analisi Transazionale?", a: "È un approccio psicoterapeutico che si concentra sulle relazioni e sulla comunicazione. Aiuta a capire come ci relazioniamo con gli altri e con noi stessi, e a modificare i pattern che ci fanno stare male. È un approccio caldo, collaborativo e orientato al cambiamento concreto." },
-            { q: "Come faccio a capire se ho bisogno di una psicoterapeuta?", a: "Se stai leggendo questa pagina, probabilmente qualcosa ti sta facendo soffrire. Non serve stare 'abbastanza male' per chiedere aiuto. Se senti che le tue relazioni, le tue emozioni o il rapporto con te stessa ti creano sofferenza, un primo colloquio può aiutarti a fare chiarezza." },
+            { q: "Come faccio a capire se ho bisogno di supporto psicologico?", a: "Se stai leggendo questa pagina, probabilmente qualcosa ti sta facendo soffrire. Non serve stare 'abbastanza male' per chiedere aiuto. Se senti che le tue relazioni, le tue emozioni o il rapporto con te stesso/a ti creano sofferenza, un primo colloquio può aiutarti a fare chiarezza." },
             { q: "Quanto dura un percorso di psicoterapia?", a: "Dipende dalla persona e dalle difficoltà. Un percorso può durare da alcuni mesi a qualche anno. Ne parliamo insieme e valutiamo periodicamente i progressi. L'obiettivo è sempre la tua autonomia." },
+            { q: "Qual è la differenza tra psicoterapia e Seduta Singola?", a: "La psicoterapia è un percorso continuativo con sedute settimanali da 50 minuti, ideale per lavorare in profondità su difficoltà strutturate. La Seduta Singola è un incontro intensivo di 90-120 minuti, pensato per fare chiarezza su un problema specifico senza impegno continuativo." },
             { q: "Lavori anche online?", a: "Sì, offro sedute in videoconsulto con la stessa efficacia delle sedute in studio. Molte persone preferiscono questa modalità per comodità o perché vivono fuori Roma." },
-            { q: "Il primo colloquio è vincolante?", a: "Assolutamente no. Il primo colloquio serve a conoscerci e a capire se posso essere la professionista giusta per te. Non c'è nessun obbligo di proseguire." },
+            { q: "Il primo appuntamento è a pagamento?", a: "Sì, il primo incontro ha lo stesso costo di una seduta regolare. Serve a conoscerci e a capire insieme quale percorso è più adatto a te: non c'è obbligo di proseguire." },
           ].map((faq, i) => (
             <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-2xl px-6 border-none">
               <AccordionTrigger className="text-left font-serif text-lg font-semibold hover:no-underline">{faq.q}</AccordionTrigger>
@@ -123,7 +118,7 @@ const ChiSono = () => (
       <div className="container-narrow text-center space-y-6">
         <AnimatedSection>
           <h2 className="text-3xl font-serif text-foreground">Vuoi saperne di più?</h2>
-          <p className="text-muted-foreground mt-4">Scrivimi senza impegno. Sarò felice di rispondere alle tue domande.</p>
+          <p className="text-muted-foreground mt-4">Scrivimi per qualsiasi domanda o per prenotare un appuntamento.</p>
           <a href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20sul%20suo%20percorso%20e%20il%20suo%20approccio." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated mt-6">
             <MessageCircle className="w-5 h-5" />
             Scrivimi su WhatsApp

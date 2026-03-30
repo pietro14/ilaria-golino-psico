@@ -38,7 +38,7 @@ const reviews: Review[] = [
     date: "28/02/2025",
     platform: "miodottore",
     type: "Psicoterapia individuale",
-    text: "Sono arrivato dalla Dottoressa Golino in un momento molto difficile della mia vita, in cui l'ansia e le preoccupazioni mi stavano sopraffacendo. Fin dal primo colloquio mi sono sentito accolto e ascoltato senza giudizio. La Dottoressa ha saputo creare un ambiente sicuro in cui potermi aprire e affrontare le mie difficoltà. Grazie al percorso intrapreso insieme, ho imparato a gestire meglio le mie emozioni e a ritrovare un equilibrio che pensavo di aver perso. La consiglio vivamente a chiunque stia attraversando un momento di difficoltà.",
+    text: "Sono arrivato dalla Dottoressa Golino in un momento molto difficile della mia vita, in cui l'ansia e le preoccupazioni mi stavano sopraffacendo. Fin dal primo appuntamento mi sono sentito accolto e ascoltato senza giudizio. La Dottoressa ha saputo creare un ambiente sicuro in cui potermi aprire e affrontare le mie difficoltà. Grazie al percorso intrapreso insieme, ho imparato a gestire meglio le mie emozioni e a ritrovare un equilibrio che pensavo di aver perso. La consiglio vivamente a chiunque stia attraversando un momento di difficoltà.",
     reply: {
       date: "03/03/2025",
       text: "Grazie Giuseppe per le sue parole. È stato un piacere accompagnarla in questo percorso e vedere i progressi che ha fatto. La strada è ancora lunga ma i risultati sono già evidenti. Continui così!",
@@ -49,7 +49,7 @@ const reviews: Review[] = [
     date: "25/02/2025",
     platform: "miodottore",
     type: "Colloquio psicologico",
-    text: "Professionista empatica e competente. Mi sono sentita subito a mio agio durante il primo colloquio. La Dottoressa Golino ha dimostrato grande capacità di ascolto e mi ha aiutata a vedere le cose da una prospettiva diversa. Il suo approccio è delicato ma efficace, e mi ha dato strumenti concreti per affrontare le mie difficoltà quotidiane.",
+    text: "Professionista empatica e competente. Mi sono sentita subito a mio agio durante il primo appuntamento. La Dottoressa Golino ha dimostrato grande capacità di ascolto e mi ha aiutata a vedere le cose da una prospettiva diversa. Il suo approccio è delicato ma efficace, e mi ha dato strumenti concreti per affrontare le mie difficoltà quotidiane.",
     reply: {
       date: "03/03/2025",
       text: "La ringrazio per la fiducia e per aver condiviso la sua esperienza. Sono contenta che si sia sentita accolta e che il nostro lavoro insieme stia portando risultati concreti nella sua vita quotidiana.",
@@ -379,7 +379,7 @@ const Recensioni = () => (
             Vuoi iniziare il tuo percorso?
           </h2>
           <p className="text-muted-foreground mt-4">
-            Scrivimi senza impegno. Il primo colloquio serve a conoscerci e a capire se posso essere la professionista giusta per te.
+            Scrivimi. Il primo appuntamento serve a conoscerci e a capire se posso essere la professionista giusta per te.
           </p>
           <a
             href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."

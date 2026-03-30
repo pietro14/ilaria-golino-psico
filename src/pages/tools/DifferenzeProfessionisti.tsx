@@ -440,7 +440,7 @@ const DifferenzeProfessionisti = () => {
               Hai ancora dubbi?
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto mt-3">
-              Scrivimi senza impegno: posso aiutarti a capire quale percorso è
+              Scrivimi: posso aiutarti a capire quale percorso è
               più adatto alla tua situazione.
             </p>
             <a
