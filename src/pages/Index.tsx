@@ -59,7 +59,7 @@ const Index = () => (
             <img
               src={ilariaGolino}
               alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-3xl shadow-float object-cover"
+              className="w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-3xl shadow-float object-cover"
             />
           </motion.div>
         </div>
