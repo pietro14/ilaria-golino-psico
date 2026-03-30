@@ -6,6 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
+const WA_LINK =
+  "https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20appuntamento.";
+
 interface TemplateMessage {
   title: string;
   category: string;
@@ -16,17 +19,17 @@ const templates: TemplateMessage[] = [
   {
     title: "Dipendenza affettiva",
     category: "Dipendenza affettiva",
-    text: "Buongiorno Dott.ssa Golino, la contatto perché mi ritrovo spesso in relazioni che mi fanno soffrire e sento di non riuscire a stare bene senza un partner. Vorrei capire se posso intraprendere un percorso con lei per lavorare su questo aspetto.",
+    text: "Buongiorno Dott.ssa Golino, la contatto perch\u00e9 mi ritrovo spesso in relazioni che mi fanno soffrire e sento di non riuscire a stare bene senza un partner. Vorrei capire se posso intraprendere un percorso con lei per lavorare su questo aspetto.",
   },
   {
-    title: "Difficoltà relazionali",
-    category: "Difficoltà relazionali",
-    text: "Buongiorno Dott.ssa Golino, sto vivendo un momento di grande difficoltà nella mia relazione e sento il bisogno di parlare con un professionista. Vorrei fissare un primo appuntamento per capire come poter affrontare questa situazione.",
+    title: "Difficolt\u00e0 relazionali",
+    category: "Difficolt\u00e0 relazionali",
+    text: "Buongiorno Dott.ssa Golino, sto vivendo un momento di grande difficolt\u00e0 nella mia relazione e sento il bisogno di parlare con un professionista. Vorrei fissare un primo appuntamento per capire come poter affrontare questa situazione.",
   },
   {
     title: "Disturbi alimentari",
     category: "Disturbi alimentari",
-    text: "Buongiorno Dott.ssa Golino, ho un rapporto complicato con il cibo e con il mio corpo da diverso tempo. Vorrei capire se il suo approccio può aiutarmi a ritrovare un equilibrio più sano.",
+    text: "Buongiorno Dott.ssa Golino, ho un rapporto complicato con il cibo e con il mio corpo da diverso tempo. Vorrei capire se il suo approccio pu\u00f2 aiutarmi a ritrovare un equilibrio pi\u00f9 sano.",
   },
 ];
 
@@ -59,60 +62,76 @@ const CopyButton = ({ text }: { text: string }) => {
   );
 };
 
+const infoCards = [
+  {
+    icon: MapPin,
+    title: "Studio",
+    lines: ["Via Tuscolana 1168", "00172 Roma (zona Cinecitt\u00e0)"],
+  },
+  {
+    icon: Clock,
+    title: "Orari",
+    lines: ["Luned\u00ec \u2014 Venerd\u00ec", "9:00 \u2014 20:00"],
+  },
+  {
+    icon: Shield,
+    title: "Riservatezza",
+    lines: ["Massima riservatezza garantita", "Rispetto del codice deontologico"],
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    lines: ["Ilaria.golino3@gmail.com", "PEC: ilaria.golino@psypec.it"],
+  },
+];
+
 const Contatti = () => (
-    <Layout>
-      <SEO title="Contatti" description="Contattami per un primo appuntamento. Studio in Via Tuscolana 1168, Roma. WhatsApp: 351 549 9417." path="/contatti" />
-      {/* Hero */}
-      <section className="section-padding bg-warm-blush">
-        <div className="container-wide">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center space-y-6"
+  <Layout>
+    <SEO
+      title="Contatti"
+      description="Contattami per un primo appuntamento. Studio in Via Tuscolana 1168, Roma. WhatsApp: 351 549 9417."
+      path="/contatti"
+    />
+
+    {/* Hero */}
+    <section className="section-padding bg-warm-blush">
+      <div className="container-wide">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto text-center space-y-6"
+        >
+          <p className="font-script italic text-2xl text-primary">Contatti</p>
+          <h1 className="text-4xl md:text-5xl font-serif text-foreground">
+            Parliamone insieme
+          </h1>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Il primo passo è il più importante. Scrivimi per fissare un primo appuntamento.
+          </p>
+          {/* Mobile-only quick WhatsApp CTA */}
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:hidden inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-2xl font-semibold hover:bg-[#20bd5a] transition-colors shadow-lg"
           >
-            <p className="font-script italic text-2xl text-primary">Contatti</p>
-            <h1 className="text-4xl md:text-5xl font-serif text-foreground">
-              Parliamone insieme
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Il primo passo è il più importante. Scrivimi per fissare un primo appuntamento.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+            <MessageCircle className="w-5 h-5" />
+            Scrivimi su WhatsApp
+          </a>
+        </motion.div>
+      </div>
+    </section>
 
-      {/* Contact options: WhatsApp + Form side by side */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* WhatsApp */}
+    {/* Main content: Form + Sidebar */}
+    <section className="section-padding bg-background">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {/* Form — takes 3/5 on desktop */}
+          <div className="lg:col-span-3">
             <AnimatedSection>
-              <div className="rounded-2xl bg-[#25D366] p-6 md:p-8 text-center text-white space-y-4 shadow-elevated h-full flex flex-col justify-center">
-                <MessageCircle className="w-10 h-10 mx-auto" />
-                <h2 className="text-xl md:text-2xl font-serif font-bold">
-                  Scrivimi su WhatsApp
-                </h2>
-                <p className="text-white/90 text-sm md:text-base">
-                  Il modo più veloce per contattarmi. Risponderò il prima possibile, di solito entro poche ore.
-                </p>
-                <a
-                  href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] px-6 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-colors shadow-lg"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Apri WhatsApp
-                </a>
-                <p className="text-white/70 text-sm">+39 351 549 9417</p>
-              </div>
-            </AnimatedSection>
-
-            {/* Contact form */}
-            <AnimatedSection delay={0.1}>
-              <div className="rounded-2xl bg-card p-6 md:p-8 border border-border/50 shadow-elevated h-full">
-                <h2 className="text-xl md:text-2xl font-serif text-foreground text-center mb-2">
+              <div className="rounded-2xl bg-card p-6 md:p-8 border border-border/50 shadow-soft">
+                <h2 className="text-2xl md:text-3xl font-serif text-foreground text-center mb-2">
                   Richiedi un appuntamento
                 </h2>
                 <p className="text-center text-muted-foreground mb-6 text-sm md:text-base">
@@ -122,158 +141,160 @@ const Contatti = () => (
               </div>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
 
-      {/* Template messages */}
-      <section className="section-padding bg-card">
-        <div className="container-wide">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground text-center mb-4">
-              Non sai cosa scrivere?
-            </h2>
-            <p className="text-center text-muted-foreground mb-10 max-w-lg mx-auto">
-              Ecco alcuni messaggi pre-compilati che puoi usare come punto di partenza.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {templates.map((template, i) => (
-              <AnimatedSection key={template.title} delay={i * 0.1}>
-                <div className="bg-background rounded-2xl p-6 border border-border/50 space-y-4 h-full flex flex-col">
-                  <span className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary self-start">
-                    {template.category}
-                  </span>
-                  <h3 className="font-serif text-lg text-foreground">{template.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {template.text}
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <CopyButton text={template.text} />
-                    <a
-                      href={`https://wa.me/393515499417?text=${encodeURIComponent(template.text)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-[#25D366] font-medium hover:opacity-80 transition-opacity"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      Invia su WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* Sidebar — takes 2/5 on desktop */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* WhatsApp card */}
+            <AnimatedSection delay={0.1}>
+              <div className="rounded-2xl bg-[#25D366] p-6 text-center text-white space-y-3 shadow-elevated">
+                <MessageCircle className="w-8 h-8 mx-auto" />
+                <h3 className="text-lg font-serif font-bold">Scrivimi su WhatsApp</h3>
+                <p className="text-white/90 text-sm">
+                  Il modo più veloce per contattarmi. Rispondo di solito entro poche ore.
+                </p>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] px-5 py-2.5 rounded-xl font-semibold hover:bg-white/90 transition-colors shadow-md text-sm"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Apri WhatsApp
+                </a>
+                <p className="text-white/70 text-xs">+39 351 549 9417</p>
+              </div>
+            </AnimatedSection>
 
-      {/* Info pratiche */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground text-center mb-12">
-              Informazioni pratiche
-            </h2>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                icon: MapPin,
-                title: "Studio",
-                lines: ["Via Tuscolana 1168", "00172 Roma (zona Cinecittà)"],
-              },
-              {
-                icon: Clock,
-                title: "Orari",
-                lines: ["Lunedì — Venerdì", "9:00 — 20:00"],
-              },
-              {
-                icon: Shield,
-                title: "Riservatezza",
-                lines: [
-                  "Massima riservatezza garantita",
-                  "Rispetto del codice deontologico",
-                ],
-              },
-              {
-                icon: Mail,
-                title: "Email",
-                lines: ["Ilaria.golino3@gmail.com", "PEC: ilaria.golino@psypec.it"],
-              },
-            ].map((info, i) => (
-              <AnimatedSection key={info.title} delay={i * 0.1}>
-                <div className="text-center space-y-4 p-6 bg-card rounded-2xl border border-border/50 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto">
-                    <info.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground">
-                    {info.title}
-                  </h3>
-                  {info.lines.map((line, j) => (
-                    <p key={j} className="text-sm text-muted-foreground">
-                      {line}
-                    </p>
-                  ))}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Reassurance quote */}
-      <section className="section-padding bg-warm-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-warm-rose/30 blur-3xl" />
-        </div>
-        <div className="container-wide text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="font-script italic text-3xl md:text-5xl text-warm-cream leading-tight mb-6">
-              &ldquo;Chiedere aiuto non è un segno di debolezza, ma il primo atto di coraggio verso il cambiamento.&rdquo;
-            </p>
-            <p className="text-warm-gold text-sm md:text-base tracking-widest uppercase">
-              — Ilaria Golino
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="section-padding bg-secondary/40">
-        <div className="container-narrow text-center space-y-6">
-          <AnimatedSection>
-            <h2 className="text-3xl font-serif text-foreground">Il primo passo è il più importante?</h2>
-            <p className="text-muted-foreground mt-4">
-              Non c'è un momento perfetto per iniziare. C'è solo il momento in cui decidi di prenderti cura di te.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-              <a
-                href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20per%20un%20primo%20colloquio."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Scrivimi su WhatsApp
-              </a>
+            {/* MioDottore card */}
+            <AnimatedSection delay={0.15}>
               <a
                 href="https://www.miodottore.it/ilaria-golino/psicologo-psicoterapeuta/roma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
+                className="flex items-center gap-3 rounded-2xl bg-card p-5 border border-border/50 shadow-soft hover:shadow-elevated transition-shadow group"
               >
-                Prenota su MioDottore
-                <ExternalLink className="w-4 h-4" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <ExternalLink className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-serif font-semibold text-foreground group-hover:text-primary transition-colors">
+                    Prenota su MioDottore
+                  </p>
+                  <p className="text-xs text-muted-foreground">Prenota direttamente online</p>
+                </div>
               </a>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+
+            {/* Info pratiche cards */}
+            {infoCards.map((info, i) => (
+              <AnimatedSection key={info.title} delay={0.2 + i * 0.05}>
+                <div className="flex items-start gap-4 rounded-2xl bg-card p-5 border border-border/50 shadow-soft">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <info.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif font-semibold text-foreground text-sm">
+                      {info.title}
+                    </h3>
+                    {info.lines.map((line, j) => (
+                      <p key={j} className="text-sm text-muted-foreground leading-relaxed">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
-      </section>
-    </Layout>
+      </div>
+    </section>
+
+    {/* Template messages — compact */}
+    <section className="section-padding bg-card">
+      <div className="container-wide">
+        <AnimatedSection>
+          <h2 className="text-2xl md:text-3xl font-serif text-foreground text-center mb-2">
+            Non sai cosa scrivere?
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-lg mx-auto text-sm md:text-base">
+            Ecco alcuni messaggi che puoi usare come punto di partenza.
+          </p>
+        </AnimatedSection>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {templates.map((template, i) => (
+            <AnimatedSection key={template.title} delay={i * 0.1}>
+              <div className="bg-background rounded-2xl p-5 border border-border/50 space-y-3 h-full flex flex-col">
+                <span className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary self-start">
+                  {template.category}
+                </span>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  {template.text}
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <CopyButton text={template.text} />
+                  <a
+                    href={`https://wa.me/393515499417?text=${encodeURIComponent(template.text)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-[#25D366] font-medium hover:opacity-80 transition-opacity"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Invia su WhatsApp
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Final CTA — simple */}
+    <section className="section-padding bg-warm-blush">
+      <div className="container-narrow text-center">
+        <AnimatedSection>
+          <p className="font-script italic text-xl md:text-2xl text-primary mb-3">
+            Non c'è un momento perfetto per iniziare
+          </p>
+          <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-4">
+            C'è solo il momento in cui decidi di prenderti cura di te
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Scrivimi su WhatsApp
+            </a>
+            <a
+              href="https://www.miodottore.it/ilaria-golino/psicologo-psicoterapeuta/roma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-6 py-3 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
+            >
+              Prenota su MioDottore
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
+    {/* Floating WhatsApp button — mobile only */}
+    <a
+      href={WA_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="lg:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-float hover:scale-105 transition-transform"
+      aria-label="Scrivimi su WhatsApp"
+    >
+      <MessageCircle className="w-7 h-7" />
+    </a>
+  </Layout>
 );
 
 export default Contatti;
