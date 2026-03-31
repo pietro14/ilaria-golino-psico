@@ -5,13 +5,11 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Quote, Star, ChevronDown, ChevronUp, MessageCircle, ExternalLink, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import facebookLogo from "@/assets/facebook-logo.svg";
 import miodottoreLogo from "@/assets/miodottore-logo.jpg";
 
 interface Review {
   name: string;
   date?: string;
-  platform: "facebook" | "miodottore";
   type?: string;
   text: string;
   reply?: {
@@ -21,22 +19,10 @@ interface Review {
 }
 
 const reviews: Review[] = [
-  // Facebook reviews
-  {
-    name: "Alessandro Dibello",
-    platform: "facebook",
-    text: "Il proprio IO non è un abito già confezionato, ma è semplicemente quella stoffa lasciata nelle mani di chi saprà cucirti addosso la versione migliore di te stesso!!! La Dott.ssa Golino è il top!",
-  },
-  {
-    name: "Mauro Silei",
-    platform: "facebook",
-    text: "Eticamente professionale e riservata.",
-  },
-  // MioDottore reviews — first 8 with full text and replies
   {
     name: "Giuseppe D.",
     date: "28/02/2025",
-    platform: "miodottore",
+
     type: "Psicoterapia individuale",
     text: "Sono arrivato dalla Dottoressa Golino in un momento molto difficile della mia vita, in cui l'ansia e le preoccupazioni mi stavano sopraffacendo. Fin dal primo appuntamento mi sono sentito accolto e ascoltato senza giudizio. La Dottoressa ha saputo creare un ambiente sicuro in cui potermi aprire e affrontare le mie difficoltà. Grazie al percorso intrapreso insieme, ho imparato a gestire meglio le mie emozioni e a ritrovare un equilibrio che pensavo di aver perso. La consiglio vivamente a chiunque stia attraversando un momento di difficoltà.",
     reply: {
@@ -47,7 +33,7 @@ const reviews: Review[] = [
   {
     name: "D.",
     date: "25/02/2025",
-    platform: "miodottore",
+
     type: "Colloquio psicologico",
     text: "Professionista empatica e competente. Mi sono sentita subito a mio agio durante il primo appuntamento. La Dottoressa Golino ha dimostrato grande capacità di ascolto e mi ha aiutata a vedere le cose da una prospettiva diversa. Il suo approccio è delicato ma efficace, e mi ha dato strumenti concreti per affrontare le mie difficoltà quotidiane.",
     reply: {
@@ -58,7 +44,7 @@ const reviews: Review[] = [
   {
     name: "Stefania",
     date: "28/01/2025",
-    platform: "miodottore",
+
     text: "Sono quasi un anno che ho iniziato il percorso con la Dott.ssa Golino e posso dire che è stata una delle scelte migliori della mia vita. Eccellente professionista, attenta, empatica e preparata. Mi ha aiutata a capire dinamiche che si ripetevano nelle mie relazioni e a lavorare su me stessa in modo profondo. La consiglio a chiunque voglia intraprendere un percorso di crescita personale serio e ben strutturato.",
     reply: {
       date: "29/01/2025",
@@ -68,7 +54,7 @@ const reviews: Review[] = [
   {
     name: "G. M.",
     date: "28/01/2025",
-    platform: "miodottore",
+
     text: "Seguo un percorso con la Dottoressa Golino da oltre un anno e mi ha aiutato enormemente. È una professionista seria, preparata e molto umana. Sa creare un clima di fiducia e sicurezza che permette di affrontare anche i temi più difficili. Grazie a lei ho imparato a conoscermi meglio e a gestire situazioni che prima mi sembravano insormontabili.",
     reply: {
       date: "29/01/2025",
@@ -78,7 +64,7 @@ const reviews: Review[] = [
   {
     name: "Davide",
     date: "28/01/2025",
-    platform: "miodottore",
+
     type: "Psicoterapia individuale",
     text: "Mi sentivo perso e solo quando ho iniziato il percorso con la Dott.ssa Golino. Non sapevo cosa aspettarmi dalla terapia, ma lei ha saputo mettermi subito a mio agio. Con pazienza e professionalità mi ha aiutato a capire le dinamiche che mi portavano a stare male e a trovare strategie concrete per il cambiamento. Oggi mi sento una persona diversa, più consapevole e più serena.",
     reply: {
@@ -89,7 +75,7 @@ const reviews: Review[] = [
   {
     name: "M.R",
     date: "28/01/2025",
-    platform: "miodottore",
+
     text: "Mi sono trovata subito a mio agio con la Dottoressa Golino. È una professionista che sa ascoltare davvero, senza giudizio, e che ti guida con delicatezza verso una maggiore consapevolezza di te stessa. Il percorso con lei mi sta aiutando a comprendere le mie emozioni e a costruire relazioni più sane.",
     reply: {
       date: "29/01/2025",
@@ -99,7 +85,7 @@ const reviews: Review[] = [
   {
     name: "LN",
     date: "28/01/2025",
-    platform: "miodottore",
+
     text: "Dopo un anno di percorso con la Dott.ssa Golino posso dire di aver raggiunto risultati importanti. Mi ha aiutata a uscire da una situazione di dipendenza affettiva che mi faceva soffrire da anni. La sua professionalità, unita a una grande umanità, rende il percorso terapeutico un'esperienza trasformativa. La raccomando con tutto il cuore.",
     reply: {
       date: "29/01/2025",
@@ -109,7 +95,7 @@ const reviews: Review[] = [
   {
     name: "Daniele",
     date: "27/04/2022",
-    platform: "miodottore",
+
     type: "Psicoterapia individuale",
     text: "Professionista eccellente. La Dott.ssa Golino mi ha aiutato in un momento molto difficile della mia vita con grande competenza e sensibilità.",
   },
@@ -117,74 +103,74 @@ const reviews: Review[] = [
   {
     name: "I.A",
     date: "22/01/2022",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Ottima professionista, empatica e preparata. Mi sono sentita accolta fin dal primo momento.",
   },
   {
     name: "Sp",
     date: "22/11/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia individuale",
     text: "Consiglio vivamente la Dott.ssa Golino. Professionale, attenta e disponibile.",
   },
   {
     name: "C.",
     date: "09/11/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Un'esperienza molto positiva. La dottoressa sa mettere a proprio agio e offre strumenti concreti.",
   },
   {
     name: "D.",
     date: "27/09/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Molto brava e professionale. Mi ha aiutato a vedere le cose in modo diverso.",
   },
   {
     name: "S.D.",
     date: "20/09/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Percorso online molto efficace. La Dottoressa è competente e disponibile.",
   },
   {
     name: "P.",
     date: "16/09/2021",
-    platform: "miodottore",
+
     text: "Professionalità e umanità. Mi sono sentito capito e supportato nel mio percorso.",
   },
   {
     name: "U. C.",
     date: "13/09/2021",
-    platform: "miodottore",
+
     text: "Ottima terapeuta. Competente, seria e molto empatica.",
   },
   {
     name: "Mariangela C.",
     date: "13/09/2021",
-    platform: "miodottore",
+
     text: "La consiglio a tutti. La Dott.ssa Golino è una professionista preparata e sensibile.",
   },
   {
     name: "Giovanna",
     date: "13/09/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Esperienza molto positiva anche online. La dottoressa è bravissima e molto disponibile.",
   },
   {
     name: "Maria R.",
     date: "13/09/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia individuale",
     text: "Eccellente professionista. Mi ha aiutata a ritrovare me stessa dopo un periodo molto buio.",
   },
   {
     name: "TM",
     date: "13/09/2021",
-    platform: "miodottore",
+
     type: "Psicoterapia online",
     text: "Sono molto soddisfatto del percorso. La Dottoressa Golino è preparata e attenta.",
   },
@@ -219,12 +205,12 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
             </div>
             <div className="flex items-center gap-1.5">
               <img
-                src={review.platform === "facebook" ? facebookLogo : miodottoreLogo}
-                alt={review.platform === "facebook" ? "Facebook" : "MioDottore"}
-                className={`h-5 w-5 object-contain ${review.platform === "miodottore" ? "rounded-md" : ""}`}
+                src={miodottoreLogo}
+                alt="MioDottore"
+                className="h-5 w-5 object-contain rounded-md"
               />
               <span className="text-xs text-muted-foreground">
-                {review.platform === "facebook" ? "Facebook" : "MioDottore"}
+                MioDottore
               </span>
             </div>
           </div>
@@ -264,7 +250,7 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
 
 const Recensioni = () => (
   <Layout>
-    <SEO title="Recensioni" description="Cosa dicono di me i miei pazienti. 21 recensioni verificate su Facebook e MioDottore con valutazione 5 su 5." path="/recensioni" />
+    <SEO title="Recensioni" description="Cosa dicono di me i miei pazienti. 19 recensioni verificate su MioDottore con valutazione 5 su 5." path="/recensioni" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
@@ -301,7 +287,7 @@ const Recensioni = () => (
               <p className="text-sm text-muted-foreground">Valutazione media</p>
             </div>
             <div className="space-y-2">
-              <p className="text-4xl font-serif font-bold text-foreground">21</p>
+              <p className="text-4xl font-serif font-bold text-foreground">19</p>
               <p className="text-sm text-muted-foreground">Recensioni verificate</p>
             </div>
             <div className="space-y-2">

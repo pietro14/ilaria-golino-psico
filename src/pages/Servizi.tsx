@@ -123,7 +123,7 @@ const Servizi = () => (
             <div className="space-y-4 text-foreground leading-relaxed">
               <p>
                 Il mio studio si trova in <strong>zona Cinecitt&agrave;</strong>, facilmente raggiungibile con i
-                mezzi pubblici e con ampia possibilit&agrave; di parcheggio. &Egrave; un ambiente caldo, riservato
+                mezzi pubblici e con possibilit&agrave; di parcheggio su strada o nei garage della zona. &Egrave; un ambiente caldo, riservato
                 e accogliente, pensato per farti sentire a tuo agio fin dal primo momento.
               </p>
               <p>
@@ -178,7 +178,7 @@ const Servizi = () => (
               icon: Euro,
               title: "Costi",
               description:
-                "Psicoterapia: 60\u20AC a seduta (50 min). Seduta Singola: 120\u20AC (90-120 min). La fattura sanitaria \u00e8 detraibile nella dichiarazione dei redditi.",
+                "Psicoterapia in studio: 60\u20AC a seduta (50 min). Psicoterapia online: 50\u20AC a seduta (50 min). Seduta Singola: 120\u20AC (90-120 min). La fattura sanitaria \u00e8 detraibile nella dichiarazione dei redditi.",
             },
             {
               icon: Clock,

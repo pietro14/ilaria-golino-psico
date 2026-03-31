@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
-import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check, ExternalLink } from "lucide-react";
+import { MessageCircle, MapPin, Clock, Shield, Mail, Copy, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WA_LINK =
@@ -165,26 +165,6 @@ const Contatti = () => (
               </div>
             </AnimatedSection>
 
-            {/* MioDottore card */}
-            <AnimatedSection delay={0.15}>
-              <a
-                href="https://www.miodottore.it/ilaria-golino/psicologo-psicoterapeuta/roma"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-2xl bg-card p-5 border border-border/50 shadow-soft hover:shadow-elevated transition-shadow group"
-              >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <ExternalLink className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-serif font-semibold text-foreground group-hover:text-primary transition-colors">
-                    Prenota su MioDottore
-                  </p>
-                  <p className="text-xs text-muted-foreground">Prenota direttamente online</p>
-                </div>
-              </a>
-            </AnimatedSection>
-
             {/* Info pratiche cards */}
             {infoCards.map((info, i) => (
               <AnimatedSection key={info.title} delay={0.2 + i * 0.05}>
@@ -260,26 +240,15 @@ const Contatti = () => (
           <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-4">
             C'è solo il momento in cui decidi di prenderti cura di te
           </h2>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Scrivimi su WhatsApp
-            </a>
-            <a
-              href="https://www.miodottore.it/ilaria-golino/psicologo-psicoterapeuta/roma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-6 py-3 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
-            >
-              Prenota su MioDottore
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Scrivimi su WhatsApp
+          </a>
         </AnimatedSection>
       </div>
     </section>

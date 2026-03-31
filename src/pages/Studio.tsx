@@ -55,7 +55,7 @@ const Studio = () => (
                   <div>
                     <p className="font-medium text-foreground">Metro e bus</p>
                     <p className="text-sm text-muted-foreground">
-                      Metro A fermata &ldquo;Giulio Agricola&rdquo;, poi 5 minuti a piedi.
+                      Metro A fermata &ldquo;Giulio Agricola&rdquo;, poi 1 minuto a piedi.
                       Diverse linee bus nelle vicinanze.
                     </p>
                   </div>
@@ -65,7 +65,7 @@ const Studio = () => (
                   <div>
                     <p className="font-medium text-foreground">In auto</p>
                     <p className="text-sm text-muted-foreground">
-                      Ampia disponibilità di parcheggio gratuito nelle vie limitrofe.
+                      Possibilità di parcheggio su strada o nei garage della zona.
                     </p>
                   </div>
                 </div>
