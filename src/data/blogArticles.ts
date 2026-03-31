@@ -94,9 +94,9 @@ Infine, si impara a riconoscere e costruire relazioni basate sull'interdipendenz
 <h3>Come faccio a distinguere la dipendenza affettiva dall'amore?</h3>
 <p>L'amore sano include desiderio dell'altro, ma non terrore della sua assenza. Nell'amore sano conservi la tua identità, i tuoi spazi, la tua capacità di stare bene anche da solo/a. La dipendenza si riconosce perché toglie: toglie libertà, toglie serenità, toglie il senso di chi sei al di fuori della relazione.</p>
 <h3>La Seduta Singola può aiutarmi a capire se ho una dipendenza affettiva?</h3>
-<p>Assolutamente sì. La <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> è pensata proprio per questo: in un incontro approfondito di 90-120 minuti possiamo esplorare insieme la tua situazione, aiutarti a riconoscere eventuali pattern di dipendenza e definire i passi successivi più adatti a te.</p>
+<p>Assolutamente sì. La <strong>Seduta Singola di Terapia (SST)</strong> è pensata proprio per questo: in un incontro approfondito di 90-120 minuti possiamo esplorare insieme la tua situazione, aiutarti a riconoscere eventuali pattern di dipendenza e definire i passi successivi più adatti a te.</p>
 <hr />
-<p><strong>Se ti sei riconosciuto/a in queste parole, sappi che non devi restare in questa condizione.</strong> Puoi contattarmi per una <strong>Seduta Singola di Consulenza Psicologica</strong> — un primo incontro approfondito e senza impegno di proseguire, in cui possiamo dare un nome a quello che senti e capire insieme quale strada percorrere. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e offro anche la possibilità di sedute online.</p>`,
+<p><strong>Se ti sei riconosciuto/a in queste parole, sappi che non devi restare in questa condizione.</strong> Puoi contattarmi per una <strong>Seduta Singola di Terapia</strong> — un primo incontro approfondito e senza impegno di proseguire, in cui possiamo dare un nome a quello che senti e capire insieme quale strada percorrere. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e offro anche la possibilità di sedute online.</p>`,
   },
   {
     slug: "relazioni-tossiche-narcisismo-come-riconoscerle",
@@ -168,9 +168,9 @@ Infine, si impara a riconoscere e costruire relazioni basate sull'interdipendenz
 <h3>Quanto tempo ci vuole per riprendersi da una relazione tossica?</h3>
 <p>Non esiste un tempo standard. Dipende dalla durata della relazione, dall'intensità della manipolazione, dalle risorse interne e dal supporto disponibile. In generale, i primi mesi dopo la separazione sono i più duri. Con un percorso terapeutico adeguato, la maggior parte delle persone inizia a sentire un miglioramento significativo entro sei mesi-un anno. Ma non si tratta solo di "superare" la relazione: si tratta di trasformare i pattern che ti ci hanno portato/a.</p>
 <h3>Posso iniziare con un singolo incontro per capire la mia situazione?</h3>
-<p>Certamente. La <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> è pensata esattamente per questo: è un incontro approfondito di 90-120 minuti in cui possiamo analizzare insieme la tua situazione relazionale, identificare i pattern in gioco e definire i passi più adatti a te — che si tratti di un percorso terapeutico, di strategie immediate o semplicemente di fare chiarezza.</p>
+<p>Certamente. La <strong>Seduta Singola di Terapia (SST)</strong> è pensata esattamente per questo: è un incontro approfondito di 90-120 minuti in cui possiamo analizzare insieme la tua situazione relazionale, identificare i pattern in gioco e definire i passi più adatti a te — che si tratti di un percorso terapeutico, di strategie immediate o semplicemente di fare chiarezza.</p>
 <hr />
-<p><strong>Se ti sei riconosciuto/a in questo articolo, il fatto che tu stia leggendo è già un segnale importante: una parte di te sa che qualcosa non va e sta cercando una via d'uscita.</strong> Puoi iniziare con una <strong>Seduta Singola di Consulenza Psicologica</strong> — un primo incontro senza impegno di proseguire, in cui possiamo dare un nome a quello che stai vivendo e capire insieme come muoverti. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e sono disponibile anche per sedute online.</p>`,
+<p><strong>Se ti sei riconosciuto/a in questo articolo, il fatto che tu stia leggendo è già un segnale importante: una parte di te sa che qualcosa non va e sta cercando una via d'uscita.</strong> Puoi iniziare con una <strong>Seduta Singola di Terapia</strong> — un primo incontro senza impegno di proseguire, in cui possiamo dare un nome a quello che stai vivendo e capire insieme come muoverti. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e sono disponibile anche per sedute online.</p>`,
   },
   {
     slug: "attacchi-di-panico-cosa-fare-sintomi",
@@ -267,7 +267,7 @@ Infine, si impara a riconoscere e costruire relazioni basate sull'interdipendenz
 <p><strong>Livello intermedio</strong>: identificare i <strong>trigger</strong> specifici — cosa scatena gli attacchi — e i pattern di pensiero e comportamento che li mantengono.</p>
 <p><strong>Livello profondo</strong>: esplorare le radici del panico nel tuo copione di vita. Quali messaggi hai ricevuto su te stesso/a e sul mondo? Quali emozioni non hai il permesso di sentire? Cosa sta cercando di dirti il tuo corpo? A questo livello lavoriamo sulla <strong>ridecisione</strong>: riscrivere quelle convinzioni profonde che tengono il sistema nervoso in uno stato di allerta permanente.</p>
 <h2>Il Ruolo della Seduta Singola negli Attacchi di Panico</h2>
-<p>Se hai avuto un attacco di panico e non sai bene come muoverti, la <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> può essere un punto di partenza particolarmente utile. In 90-120 minuti possiamo:</p>
+<p>Se hai avuto un attacco di panico e non sai bene come muoverti, la <strong>Seduta Singola di Terapia (SST)</strong> può essere un punto di partenza particolarmente utile. In 90-120 minuti possiamo:</p>
 <ul>
 <li><strong>Comprendere cosa è successo</strong>: analizzare il tuo attacco nel suo contesto specifico</li>
 <li><strong>Valutare la situazione</strong>: capire se si tratta di un episodio isolato o se ci sono segnali di un pattern più ampio</li>
@@ -285,7 +285,7 @@ Infine, si impara a riconoscere e costruire relazioni basate sull'interdipendenz
 <h3>Quanto dura un percorso terapeutico per il disturbo di panico?</h3>
 <p>La durata varia molto da persona a persona. Per la gestione dei sintomi immediati, spesso bastano poche sedute. Per un lavoro più profondo sulle cause sottostanti — che è quello che garantisce risultati più stabili nel tempo — il percorso può durare da alcuni mesi a un anno o più, a cadenza settimanale.</p>
 <hr />
-<p><strong>Se convivi con la paura degli attacchi di panico, sappi che non devi rassegnarti a questa condizione.</strong> Puoi contattarmi per una <strong>Seduta Singola di Consulenza Psicologica</strong> — un primo incontro approfondito e senza impegno, in cui capiremo insieme cosa sta accadendo e come affrontarlo. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e offro anche sedute online per chi non può venire in studio.</p>`,
+<p><strong>Se convivi con la paura degli attacchi di panico, sappi che non devi rassegnarti a questa condizione.</strong> Puoi contattarmi per una <strong>Seduta Singola di Terapia</strong> — un primo incontro approfondito e senza impegno, in cui capiremo insieme cosa sta accadendo e come affrontarlo. Ricevo a Roma in Via Tuscolana 1168 (zona Cinecittà) e offro anche sedute online per chi non può venire in studio.</p>`,
   },
   {
     slug: "terapia-seduta-singola-come-funziona",
@@ -315,7 +315,7 @@ Infine, si impara a riconoscere e costruire relazioni basate sull'interdipendenz
 <p><strong>Potenziamento personale.</strong> Non hai necessariamente un "problema" da risolvere, ma vuoi lavorare su un aspetto specifico della tua vita: assertività, gestione dello stress, comunicazione nelle relazioni.</p>
 <p>È importante chiarire, però, che la SST <strong>non è indicata per tutte le situazioni</strong>. Disturbi strutturati, traumi complessi, dipendenze, disturbi di personalità richiedono generalmente percorsi più articolati. La buona notizia è che la seduta singola può comunque servire come primo passo per orientarsi e capire quale tipo di supporto sia più adatto.</p>
 <h3>Come funziona in pratica: il percorso di una seduta</h3>
-<p>Una Seduta Singola di Consulenza Psicologica dura tra i <strong>90 e i 120 minuti</strong> — molto più di una seduta tradizionale da 50 minuti. Questo tempo extra è fondamentale: permette di andare in profondità, senza la fretta di dover rimandare alla settimana successiva.</p>
+<p>Una Seduta Singola di Terapia dura tra i <strong>90 e i 120 minuti</strong> — molto più di una seduta tradizionale da 50 minuti. Questo tempo extra è fondamentale: permette di andare in profondità, senza la fretta di dover rimandare alla settimana successiva.</p>
 <p>Ecco come si svolge tipicamente l'incontro:</p>
 <p><strong>Fase 1 – Definizione del focus (primi 20-30 minuti).</strong> Iniziamo esplorando insieme ciò che ti ha portato qui. Non si tratta di raccogliere tutta la tua storia di vita, ma di identificare con chiarezza il problema principale, ciò che desideri cambiare, e l'obiettivo concreto della seduta. Ti chiederò qualcosa come: <em>"Se questa seduta funzionasse al meglio, cosa sarebbe diverso nella tua vita domani?"</em></p>
 <p><strong>Fase 2 – Esplorazione e lavoro attivo (40-60 minuti).</strong> Questa è la parte centrale, dove lavoriamo insieme sul tema identificato. Utilizzo strumenti dell'Analisi Transazionale per aiutarti a comprendere i meccanismi interni che mantengono il problema. Ad esempio, potremmo esplorare quale parte di te — il Genitore interiore, l'Adulto, il Bambino — sta guidando le tue reazioni in quella situazione. Spesso, il solo atto di rendere visibili questi meccanismi produce un cambiamento nella percezione del problema.</p>
@@ -350,7 +350,7 @@ Assolutamente sì. La modalità online è altrettanto efficace, soprattutto per 
 <p><strong>E se dopo la seduta sentissi il bisogno di continuare?</strong>
 È una possibilità del tutto normale. Se lo desideri, possiamo valutare insieme l'inizio di un percorso di psicoterapia individuale (sedute settimanali da 50 minuti a 60€). La seduta singola, in quel caso, diventa un ottimo punto di partenza: avrai già identificato i temi centrali e sperimentato il mio modo di lavorare.</p>
 <hr />
-<p>Se senti che è arrivato il momento di fare qualcosa per te, ma non sai da dove cominciare, la <strong>Seduta Singola di Consulenza Psicologica</strong> può essere il primo passo. Un incontro, senza impegno a lungo termine, per fare chiarezza e ritrovare una direzione. Contattami per fissare il tuo appuntamento.</p>`,
+<p>Se senti che è arrivato il momento di fare qualcosa per te, ma non sai da dove cominciare, la <strong>Seduta Singola di Terapia</strong> può essere il primo passo. Un incontro, senza impegno a lungo termine, per fare chiarezza e ritrovare una direzione. Contattami per fissare il tuo appuntamento.</p>`,
   },
   {
     slug: "ansia-sintomi-fisici-somatizzazione",
@@ -433,9 +433,9 @@ Sì, è sempre importante effettuare gli accertamenti medici opportuni per esclu
 <p><strong>Quanto tempo ci vuole per migliorare?</strong>
 Dipende dalla situazione. Alcune persone notano un miglioramento significativo già dopo poche sedute, nel momento in cui iniziano a comprendere il legame tra emozioni e sintomi. Per altri, il percorso è più lungo, soprattutto se la somatizzazione è radicata in schemi relazionali e familiari profondi. L'importante è non scoraggiarsi: il corpo ha impiegato tempo per costruire quel linguaggio, e ha bisogno di tempo per impararne uno nuovo.</p>
 <p><strong>Posso affrontare questo tema in una singola seduta?</strong>
-Una Seduta Singola di Consulenza Psicologica può essere un ottimo punto di partenza per iniziare a esplorare il legame tra i tuoi sintomi fisici e il tuo mondo emotivo. In 90-120 minuti possiamo mappare i tuoi sintomi, identificare i possibili fattori emotivi coinvolti e definire una strategia. Se poi emergerà la necessità di un percorso più strutturato, potrai decidere con maggiore consapevolezza.</p>
+Una Seduta Singola di Terapia può essere un ottimo punto di partenza per iniziare a esplorare il legame tra i tuoi sintomi fisici e il tuo mondo emotivo. In 90-120 minuti possiamo mappare i tuoi sintomi, identificare i possibili fattori emotivi coinvolti e definire una strategia. Se poi emergerà la necessità di un percorso più strutturato, potrai decidere con maggiore consapevolezza.</p>
 <hr />
-<p>Il tuo corpo non è il tuo nemico: è il tuo alleato più sincero. Se senti che sta cercando di dirti qualcosa che non riesci ancora a tradurre in parole, la <strong>Seduta Singola di Consulenza Psicologica</strong> può essere il primo passo per iniziare ad ascoltarlo. Contattami per fissare un appuntamento, in studio a Roma o online.</p>`,
+<p>Il tuo corpo non è il tuo nemico: è il tuo alleato più sincero. Se senti che sta cercando di dirti qualcosa che non riesci ancora a tradurre in parole, la <strong>Seduta Singola di Terapia</strong> può essere il primo passo per iniziare ad ascoltarlo. Contattami per fissare un appuntamento, in studio a Roma o online.</p>`,
   },
   {
     slug: "disturbo-borderline-personalita-sintomi-cura",
@@ -502,7 +502,7 @@ Assolutamente sì. I tratti di personalità esistono su un continuum. Molte pers
 <p><strong>Come capire se ho bisogno di aiuto?</strong>
 Se ti riconosci in diverse delle descrizioni contenute in questo articolo e senti che queste difficoltà impattano significativamente sulla tua vita quotidiana, sulle tue relazioni, sul tuo lavoro, è il momento di parlare con un/a professionista. Non per ricevere un'etichetta, ma per capire cosa sta succedendo e cosa puoi fare.</p>
 <hr />
-<p>Se senti che è arrivato il momento di fare chiarezza sulla tua situazione, la <strong>Seduta Singola di Consulenza Psicologica</strong> può essere un primo passo concreto e senza impegno a lungo termine: 90-120 minuti dedicati a te, per esplorare ciò che stai vivendo e capire quale percorso potrebbe essere più adatto. Contattami per un appuntamento, in studio a Roma o online.</p>`,
+<p>Se senti che è arrivato il momento di fare chiarezza sulla tua situazione, la <strong>Seduta Singola di Terapia</strong> può essere un primo passo concreto e senza impegno a lungo termine: 90-120 minuti dedicati a te, per esplorare ciò che stai vivendo e capire quale percorso potrebbe essere più adatto. Contattami per un appuntamento, in studio a Roma o online.</p>`,
   },
   {
     slug: "psicoterapia-online-funziona-guida",
@@ -570,7 +570,7 @@ Se ti riconosci in diverse delle descrizioni contenute in questo articolo e sent
 <h3>La Formula Mista: Combinare Online e In Presenza</h3>
 <p>Una possibilità che molte persone trovano ideale è il <strong>formato misto</strong>. Alcune sedute si svolgono nel mio studio di Roma, in Via Tuscolana 1168 nella zona di Cinecittà, e altre in videochiamata.</p>
 <p>Questo approccio offre il meglio di entrambi i mondi: la profondità della presenza fisica quando possibile, la comodità dell'online quando la vita si complica. Se una settimana hai l'influenza, sei in viaggio, o semplicemente il traffico romano è più caotico del solito, la seduta non salta — si sposta online.</p>
-<p>Anche la <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> è disponibile in formato online. Si tratta di un incontro più lungo (90-120 minuti) pensato per affrontare una questione specifica in modo mirato e completo. Può essere un ottimo punto di partenza se vuoi capire se la terapia online fa per te, senza impegnarti subito in un percorso continuativo.</p>
+<p>Anche la <strong>Seduta Singola di Terapia (SST)</strong> è disponibile in formato online. Si tratta di un incontro più lungo (90-120 minuti) pensato per affrontare una questione specifica in modo mirato e completo. Può essere un ottimo punto di partenza se vuoi capire se la terapia online fa per te, senza impegnarti subito in un percorso continuativo.</p>
 <h3>Come Prepararti alla Tua Prima Seduta Online</h3>
 <p>Per ottenere il massimo dalla terapia online, ci sono alcuni accorgimenti pratici che fanno davvero la differenza.</p>
 <h4>Lo spazio</h4>
@@ -595,7 +595,7 @@ Se ti riconosci in diverse delle descrizioni contenute in questo articolo e sent
 <p><strong>Posso passare dall'online al in presenza e viceversa?</strong></p>
 <p>Assolutamente sì. Molti dei miei pazienti utilizzano un formato misto, scegliendo di volta in volta in base alle proprie esigenze. La flessibilità è uno dei punti di forza della terapia online e non compromette in alcun modo la continuità del percorso.</p>
 <hr />
-<p>Se stai valutando di iniziare un percorso di psicoterapia online, o se vuoi semplicemente capire se può essere la scelta giusta per te, la <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> può essere un primo passo concreto e senza impegno continuativo. In 90-120 minuti avrai modo di sperimentare il formato, conoscermi e lavorare su una questione che ti sta a cuore. Puoi prenotarla contattandomi direttamente — sarò felice di rispondere a qualsiasi domanda.</p>`,
+<p>Se stai valutando di iniziare un percorso di psicoterapia online, o se vuoi semplicemente capire se può essere la scelta giusta per te, la <strong>Seduta Singola di Terapia (SST)</strong> può essere un primo passo concreto e senza impegno continuativo. In 90-120 minuti avrai modo di sperimentare il formato, conoscermi e lavorare su una questione che ti sta a cuore. Puoi prenotarla contattandomi direttamente — sarò felice di rispondere a qualsiasi domanda.</p>`,
   },
   {
     slug: "disturbi-alimentari-cause-psicologiche",
@@ -676,7 +676,7 @@ Se ti riconosci in diverse delle descrizioni contenute in questo articolo e sent
 <p><strong>Il percorso terapeutico per i disturbi alimentari richiede anche un supporto nutrizionale?</strong></p>
 <p>Spesso sì. L'approccio ideale è multidisciplinare: psicoterapeuta, nutrizionista specializzato/a in disturbi alimentari e, quando necessario, psichiatra. Ogni professionista si occupa di un aspetto diverso, e la collaborazione tra queste figure garantisce un supporto completo.</p>
 <hr />
-<p>Se ti riconosci in qualcosa di ciò che hai letto, o se senti che il tuo rapporto con il cibo nasconde un disagio più profondo, sappi che chiedere aiuto è il primo atto di coraggio verso il cambiamento. La <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> può essere un modo per iniziare a esplorare la tua situazione in uno spazio protetto, senza l'obbligo di impegnarti subito in un percorso lungo. Contattami per saperne di più: sarò felice di ascoltarti.</p>`,
+<p>Se ti riconosci in qualcosa di ciò che hai letto, o se senti che il tuo rapporto con il cibo nasconde un disagio più profondo, sappi che chiedere aiuto è il primo atto di coraggio verso il cambiamento. La <strong>Seduta Singola di Terapia (SST)</strong> può essere un modo per iniziare a esplorare la tua situazione in uno spazio protetto, senza l'obbligo di impegnarti subito in un percorso lungo. Contattami per saperne di più: sarò felice di ascoltarti.</p>`,
   },
   {
     slug: "quando-andare-dallo-psicoterapeuta",
@@ -732,7 +732,7 @@ Se ti riconosci in diverse delle descrizioni contenute in questo articolo e sent
 <p>La paura del primo appuntamento è una delle ragioni più comuni per cui le persone rimandano. Sapere cosa ti aspetta può aiutarti a superarla.</p>
 <p>Il primo incontro è uno <strong>spazio di conoscenza reciproca</strong>. Non è un interrogatorio né un test. Mi racconti cosa ti porta qui (non devi avere le idee chiare), ti faccio alcune domande per capire la tua situazione, valutiamo insieme se il mio approccio è adatto e ti spiego come lavoro. Non c'è nessun obbligo di proseguire — è un momento per capire se ti senti a tuo agio.</p>
 <h3>La Seduta Singola (SST): Un Primo Passo Senza Impegno</h3>
-<p>Se l'idea di iniziare un percorso settimanale ti sembra un salto troppo grande, esiste un'opzione intermedia: la <strong>Seduta Singola di Consulenza Psicologica (SST)</strong>.</p>
+<p>Se l'idea di iniziare un percorso settimanale ti sembra un salto troppo grande, esiste un'opzione intermedia: la <strong>Seduta Singola di Terapia (SST)</strong>.</p>
 <p>Si tratta di un incontro più lungo — tra i 90 e i 120 minuti — pensato per essere <strong>completo in sé</strong>. Non è una "seduta di prova", ma un vero e proprio intervento strutturato in cui lavoriamo insieme su una questione specifica che ti sta a cuore.</p>
 <p>Il costo è di 120€ ed è disponibile sia in studio a Roma (Via Tuscolana 1168, zona Cinecittà) che online. Alla fine della SST potrai decidere liberamente se proseguire con un percorso di psicoterapia, se la singola seduta è stata sufficiente, o se hai bisogno di tempo per riflettere.</p>
 <p>Per molte persone, la SST rappresenta il modo ideale per <strong>superare la barriera iniziale</strong>: tocchi con mano come funziona lo spazio terapeutico, ottieni già qualcosa di concreto, e ti dai la libertà di scegliere senza pressione.</p>
@@ -748,7 +748,7 @@ Se ti riconosci in diverse delle descrizioni contenute in questo articolo e sent
 <p><strong>La psicoterapia online è efficace quanto quella in studio?</strong></p>
 <p>La ricerca scientifica conferma che la psicoterapia online è efficace quanto quella in presenza per la maggior parte delle problematiche psicologiche. Offro entrambe le modalità, e molti pazienti scelgono un formato misto in base alle proprie esigenze settimanali.</p>
 <hr />
-<p>Se ti sei riconosciuto/a in uno o più di questi segnali, il passo più importante è il primo. Non devi avere una diagnosi, non devi essere in crisi, non devi avere tutto chiaro. Devi solo decidere di <strong>prenderti sul serio</strong>. La <strong>Seduta Singola di Consulenza Psicologica (SST)</strong> è pensata proprio per questo: un primo incontro approfondito, senza obbligo di continuare, in cui puoi portare ciò che ti pesa e iniziare a vederlo con occhi nuovi. Contattami per prenotare — il fatto che tu stia leggendo questo articolo è già un segnale che sei pronto/a.</p>`,
+<p>Se ti sei riconosciuto/a in uno o più di questi segnali, il passo più importante è il primo. Non devi avere una diagnosi, non devi essere in crisi, non devi avere tutto chiaro. Devi solo decidere di <strong>prenderti sul serio</strong>. La <strong>Seduta Singola di Terapia (SST)</strong> è pensata proprio per questo: un primo incontro approfondito, senza obbligo di continuare, in cui puoi portare ciò che ti pesa e iniziare a vederlo con occhi nuovi. Contattami per prenotare — il fatto che tu stia leggendo questo articolo è già un segnale che sei pronto/a.</p>`,
   },
   {
     slug: "analisi-transazionale-come-funziona",
@@ -808,7 +808,7 @@ Rispetto alla psicoanalisi classica, l'AT utilizza un linguaggio più accessibil
 <p><strong>Posso capire da solo/a i miei stati dell'Io o serve un terapeuta?</strong>
 Leggere e informarsi sull'AT può certamente aumentare la tua consapevolezza. Tuttavia, i meccanismi di copione più profondi operano a livello inconscio e spesso sono proprio quei punti ciechi che non riusciamo a vedere da soli. Un/a terapeuta formato/a in AT ti offre uno spazio sicuro e una competenza professionale per esplorare queste dinamiche in profondità e, soprattutto, per trasformarle.</p>
 <hr />
-<p>Se ti sei riconosciuto/a in qualcuna delle dinamiche descritte in questo articolo e senti il desiderio di comprenderti meglio, il primo passo può essere più semplice di quanto pensi. La <strong>Seduta Singola di Consulenza Psicologica</strong> è un incontro di 90-120 minuti in cui possiamo esplorare insieme la tua situazione, iniziare a identificare i tuoi schemi e capire quale percorso potrebbe essere più adatto a te. Per informazioni o per prenotare, puoi contattare la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà.</p>`,
+<p>Se ti sei riconosciuto/a in qualcuna delle dinamiche descritte in questo articolo e senti il desiderio di comprenderti meglio, il primo passo può essere più semplice di quanto pensi. La <strong>Seduta Singola di Terapia</strong> è un incontro di 90-120 minuti in cui possiamo esplorare insieme la tua situazione, iniziare a identificare i tuoi schemi e capire quale percorso potrebbe essere più adatto a te. Per informazioni o per prenotare, puoi contattare la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà.</p>`,
   },
   {
     slug: "autosabotaggio-relazioni-come-smettere",
@@ -868,7 +868,7 @@ Non esiste una risposta universale: dipende dalla profondità dello schema, dall
 <p><strong>Posso lavorare sull'autosabotaggio anche se attualmente non sono in una relazione?</strong>
 Assolutamente sì. Anzi, lavorare su questi schemi quando non sei nel pieno di una dinamica relazionale può offrire una prospettiva più ampia e meno reattiva. Gli schemi di autosabotaggio non si manifestano solo nelle relazioni sentimentali: emergono anche nelle amicizie, nel lavoro e nella relazione con te stesso/a. Il lavoro terapeutico ti prepara ad affrontare le relazioni future con strumenti diversi.</p>
 <hr />
-<p>Se hai riconosciuto le tue dinamiche in questo articolo e senti che è il momento di spezzare il ciclo, un buon punto di partenza può essere la <strong>Seduta Singola di Consulenza Psicologica</strong>: un incontro di 90-120 minuti in cui possiamo esplorare insieme i tuoi schemi relazionali, comprendere da dove vengono e definire un possibile percorso di cambiamento. Per informazioni o prenotazioni, puoi contattare la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà, o in modalità online.</p>`,
+<p>Se hai riconosciuto le tue dinamiche in questo articolo e senti che è il momento di spezzare il ciclo, un buon punto di partenza può essere la <strong>Seduta Singola di Terapia</strong>: un incontro di 90-120 minuti in cui possiamo esplorare insieme i tuoi schemi relazionali, comprendere da dove vengono e definire un possibile percorso di cambiamento. Per informazioni o prenotazioni, puoi contattare la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà, o in modalità online.</p>`,
   },
   {
     slug: "stress-lavoro-burnout-sintomi-cosa-fare",
@@ -921,7 +921,7 @@ Assolutamente sì. Anzi, lavorare su questi schemi quando non sei nel pieno di u
 <h3>Cosa Fare: Dal Primo Passo alla Ricostruzione</h3>
 <p>Se ti riconosci nelle descrizioni di questo articolo, ecco una mappa orientativa dei possibili percorsi.</p>
 <p><strong>L'intervento d'urgenza: fermarsi.</strong> Se sei negli stadi avanzati, la priorità è fermarti. Questo può significare un periodo di malattia, una riduzione dell'orario, un permesso. Lo so: sembra impossibile, il Genitore Normativo dentro di te sta già dicendo "Non puoi permettertelo". Ma il tuo corpo sta dicendo il contrario, e il corpo ha ragione.</p>
-<p><strong>La Seduta Singola di Consulenza Psicologica (SST).</strong> Se non sei sicuro/a di ciò che stai vivendo, se vuoi una valutazione professionale della tua situazione, la seduta singola di 90-120 minuti può essere un punto di partenza prezioso. In un unico incontro, possiamo esplorare la tua situazione attuale, comprendere i fattori che contribuiscono al tuo malessere, valutare la gravità della situazione e definire i passi successivi più appropriati per te.</p>
+<p><strong>La Seduta Singola di Terapia (SST).</strong> Se non sei sicuro/a di ciò che stai vivendo, se vuoi una valutazione professionale della tua situazione, la seduta singola di 90-120 minuti può essere un punto di partenza prezioso. In un unico incontro, possiamo esplorare la tua situazione attuale, comprendere i fattori che contribuiscono al tuo malessere, valutare la gravità della situazione e definire i passi successivi più appropriati per te.</p>
 <p><strong>La psicoterapia strutturata.</strong> Per il burnout radicato, un percorso settimanale permette di lavorare sulle cause profonde: le dinamiche interne che ti portano a superare sistematicamente i tuoi limiti, le credenze di copione su lavoro e valore personale, la difficoltà a porre confini.</p>
 <p><strong>Interventi complementari.</strong> Igiene del sonno, attività fisica, tecniche di rilassamento e revisione dell'organizzazione lavorativa sostengono il processo di recupero. Anche una valutazione medica può essere importante negli stadi avanzati.</p>
 <h3>Prevenzione: Come Non Arrivarci</h3>
@@ -936,6 +936,6 @@ Il riposo è necessario ma raramente sufficiente. Molte persone tornano dalle va
 <p><strong>Cambiare lavoro risolve il burnout?</strong>
 Dipende. Se il burnout è causato da condizioni oggettivamente tossiche, il cambiamento può essere risolutivo. Se le cause principali sono interne (perfezionismo, difficoltà a porre confini), rischi di portare le stesse dinamiche nel nuovo contesto. Il lavoro terapeutico aiuta a distinguere i fattori esterni da quelli interni.</p>
 <hr />
-<p>Se ti riconosci in quello che hai letto e senti che è il momento di prenderti cura di te, la <strong>Seduta Singola di Consulenza Psicologica</strong> può essere il primo passo. In 90-120 minuti, possiamo fare il punto sulla tua situazione, capire cosa sta succedendo e definire insieme le strategie più adatte al tuo caso. Per informazioni o per prenotare, contatta la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà, o in modalità online.</p>`,
+<p>Se ti riconosci in quello che hai letto e senti che è il momento di prenderti cura di te, la <strong>Seduta Singola di Terapia</strong> può essere il primo passo. In 90-120 minuti, possiamo fare il punto sulla tua situazione, capire cosa sta succedendo e definire insieme le strategie più adatte al tuo caso. Per informazioni o per prenotare, contatta la Dott.ssa Ilaria Golino, Psicologa Psicoterapeuta e Analista Transazionale Certificata (CTA), presso lo studio di Roma in Via Tuscolana 1168, zona Cinecittà, o in modalità online.</p>`,
   },
 ];
