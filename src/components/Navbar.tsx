@@ -2,14 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import type { MouseEvent } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
-import logo0 from "@/assets/logo-round.png";
-import logo1 from "@/assets/logo-variant-1.png";
-import logo2 from "@/assets/logo-variant-2.png";
-import logo3 from "@/assets/logo-variant-3.png";
-import logo4 from "@/assets/logo-variant-4.png";
-
-const logos = [logo0, logo1, logo2, logo3, logo4];
-const logoLabels = ["Originale", "Proposta 1", "Proposta 2", "Proposta 3", "Proposta 4"];
+import logo from "@/assets/logo-round.png";
 
 interface NavLink {
   href: string;
@@ -41,7 +34,6 @@ const navItems: NavItem[] = [
       { href: "/approfondimenti", label: "Blog" },
       { href: "/quiz", label: "Faccio al caso tuo?" },
       { href: "/test-relazioni-dannose", label: "Test di auto-valutazione" },
-      { href: "/calcolatore-costo-terapia", label: "Quanto costa la terapia?" },
       { href: "/psicologo-psicoterapeuta-psichiatra-differenze", label: "Psicologo vs Psicoterapeuta" },
       { href: "/domande-risposte", label: "Domande e Risposte" },
     ],
@@ -54,8 +46,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileRisorseOpen, setMobileRisorseOpen] = useState(false);
-  const [logoIndex, setLogoIndex] = useState(0);
-  const [showLogoLabel, setShowLogoLabel] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -93,15 +83,6 @@ const Navbar = () => {
     }
   };
 
-  const handleLogoImgClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const next = (logoIndex + 1) % logos.length;
-    setLogoIndex(next);
-    setShowLogoLabel(true);
-    setTimeout(() => setShowLogoLabel(false), 2000);
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -116,20 +97,11 @@ const Navbar = () => {
           onClick={handleLogoClick}
           className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          <div className="relative">
-            <img
-              src={logos[logoIndex]}
-              alt="Dott.ssa Ilaria Golino Logo"
-              className="w-12 h-12 rounded-full cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all"
-              onClick={handleLogoImgClick}
-              title="Clicca per cambiare logo"
-            />
-            {showLogoLabel && (
-              <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-foreground text-background px-2 py-0.5 rounded-md shadow-sm">
-                {logoLabels[logoIndex]}
-              </span>
-            )}
-          </div>
+          <img
+            src={logo}
+            alt="Dott.ssa Ilaria Golino Logo"
+            className="w-12 h-12 rounded-full"
+          />
           <div className="flex flex-col">
             <span className="text-lg font-serif font-semibold text-foreground tracking-wide">
               Dott.ssa Ilaria Golino

@@ -3,14 +3,10 @@ import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { Link } from "react-router-dom";
-import { Heart, Brain, Shield, Leaf, ArrowRight, CheckCircle2, MessageCircle, HandHeart, Calculator, HelpCircle, ClipboardCheck, Zap } from "lucide-react";
+import { Heart, Brain, Shield, Leaf, ArrowRight, CheckCircle2, MessageCircle, HandHeart, HelpCircle, ClipboardCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import ilariaGolino from "@/assets/ilaria-golino-new.jpg";
-import { useFontTheme, fontThemes } from "@/components/FontContext";
-
-
 const Index = () => {
-  const { themeIndex, cycleFont } = useFontTheme();
   return (
   <Layout>
     <SEO path="/" />
@@ -24,10 +20,10 @@ const Index = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8 text-center lg:text-left"
           >
-            <p className="font-script italic text-2xl text-primary">
+            <p className="font-script italic text-2xl md:text-3xl text-primary">
               Uno spazio sicuro per prenderti cura di te
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-foreground">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight text-foreground">
               Psicoterapeuta a Roma{" "}
               <span className="text-primary italic">e online</span>
             </h1>
@@ -59,15 +55,12 @@ const Index = () => {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative cursor-pointer group" onClick={cycleFont} title="Clicca per cambiare font">
+            <div className="relative">
               <img
                 src={ilariaGolino}
                 alt="Dott.ssa Ilaria Golino - Psicoterapeuta Roma"
-                className="w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-3xl shadow-float object-cover group-hover:ring-4 group-hover:ring-primary/20 transition-all"
+                className="w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-3xl shadow-float object-cover"
               />
-              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-foreground/80 text-background text-xs px-3 py-1.5 rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                Font: {fontThemes[themeIndex].label}
-              </span>
             </div>
           </motion.div>
         </div>
@@ -87,7 +80,7 @@ const Index = () => {
               </div>
               <div className="space-y-4 text-center md:text-left">
                 <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-                  Seduta Singola di Consulenza Psicologica
+                  Seduta Singola di Terapia
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Un incontro intensivo di 90-120 minuti, pensato per lavorare in modo mirato su una difficoltà specifica. Fare chiarezza, comprendere la tua situazione e trovare possibili passi concreti.
@@ -302,11 +295,10 @@ const Index = () => {
             </p>
           </div>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
             { icon: HelpCircle, title: "Faccio al caso tuo?", description: "Un breve quiz per capire se il mio approccio è adatto alle tue esigenze.", link: "/quiz" },
             { icon: ClipboardCheck, title: "Test di auto-valutazione", description: "Rispondi a poche domande per riflettere sul tuo rapporto con le relazioni o con il cibo.", link: "/test-relazioni-dannose" },
-            { icon: Calculator, title: "Quanto costa la terapia?", description: "Un calcolatore trasparente per pianificare il tuo investimento nel benessere.", link: "/calcolatore-costo-terapia" },
             { icon: Brain, title: "Psicologo o Psicoterapeuta?", description: "Scopri le differenze tra le figure professionali della salute mentale.", link: "/psicologo-psicoterapeuta-psichiatra-differenze" },
           ].map((tool, i) => (
             <AnimatedSection key={tool.title} delay={i * 0.1}>

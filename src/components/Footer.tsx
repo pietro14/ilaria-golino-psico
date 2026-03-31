@@ -42,7 +42,7 @@ const Footer = () => (
           <nav className="flex flex-col gap-2">
             <Link to="/quiz" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Quiz: faccio al caso tuo?</Link>
             <Link to="/test-relazioni-dannose" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Test di auto-valutazione</Link>
-            <Link to="/calcolatore-costo-terapia" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Quanto costa la terapia?</Link>
+
             <Link to="/psicologo-psicoterapeuta-psichiatra-differenze" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Psicologo vs Psicoterapeuta</Link>
             <Link to="/domande-risposte" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Domande e Risposte</Link>
             <Link to="/video" className="text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">Video</Link>
