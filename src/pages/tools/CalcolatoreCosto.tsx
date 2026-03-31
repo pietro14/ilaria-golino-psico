@@ -146,7 +146,7 @@ const CalcolatoreCosto = () => {
           <div className="text-center py-6">
             <p className="font-script italic text-2xl text-primary leading-relaxed">
               &ldquo;Investire nella propria salute mentale non è un lusso, è un atto
-              d'amore verso te stessa.&rdquo;
+              d'amore verso te stesso/a.&rdquo;
             </p>
           </div>
 

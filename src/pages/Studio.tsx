@@ -47,7 +47,7 @@ const Studio = () => (
               <p className="text-foreground leading-relaxed">
                 Lo studio si trova in <strong>zona Cinecittà</strong>, a pochi minuti a piedi dalla
                 fermata <strong>Metro A &ldquo;Giulio Agricola&rdquo;</strong>. È un ambiente riservato,
-                luminoso e pensato per farti sentire accolta fin dal primo momento.
+                luminoso e pensato per farti sentire accolto/a fin dal primo momento.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-background">

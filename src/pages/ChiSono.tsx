@@ -27,7 +27,7 @@ const ChiSono = () => (
           <div className="space-y-6 text-foreground leading-relaxed">
             <p>Sono Ilaria Golino, Psicologa Psicoterapeuta e <strong>Analista Transazionale Certificata (CTA)</strong>, membro dell'EATA (European Association for Transactional Analysis). Ricevo nel mio studio privato a Roma e online.</p>
             <p>Mi sono specializzata in <strong>Analisi Transazionale integrata</strong>, un approccio che mette al centro la relazione tra terapeuta e paziente e lavora su come ci relazioniamo con noi stessi e con gli altri. Lavoro principalmente con persone che vivono <strong>difficoltà nelle relazioni</strong>: chi si ritrova sempre in legami dolorosi, chi ha paura dell'abbandono, chi fa fatica a stare da solo/a o chi sente di non valere abbastanza.</p>
-            <p>Mi occupo anche di <strong>disturbo borderline di personalità</strong>, <strong>disturbi alimentari</strong> e di <strong>orientamento professionale</strong>, aiutando le persone a ritrovare direzione e motivazione nel proprio percorso lavorativo.</p>
+            <p>Mi occupo anche di <strong>disturbo borderline di personalità</strong>, <strong>disturbi alimentari</strong>, <strong>trattamento dell'ansia</strong>, <strong>elaborazione del lutto</strong>, <strong>trauma</strong> e di <strong>orientamento professionale</strong>, aiutando le persone a ritrovare direzione e motivazione nel proprio percorso lavorativo. Queste sono le mie aree prevalenti, ma non le uniche: se non trovi la tua situazione tra quelle elencate, contattami e potrò dirti se posso aiutarti.</p>
             <p>Credo che ogni persona abbia in sé le risorse per cambiare. Il mio compito è creare uno spazio sicuro dove poterle scoprire insieme, senza giudizio e con i tuoi tempi.</p>
           </div>
         </AnimatedSection>
@@ -41,7 +41,7 @@ const ChiSono = () => (
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
-            { icon: Heart, title: "Le relazioni ci definiscono", description: "Le difficoltà relazionali sono spesso la manifestazione di ferite profonde. Lavorare sulle relazioni significa lavorare sul nucleo del malessere." },
+            { icon: Heart, title: "Le relazioni sono al centro di chi siamo", description: "Le difficoltà relazionali sono spesso la manifestazione di ferite profonde. Lavorare sulle relazioni significa lavorare sul nucleo del malessere." },
             { icon: CheckCircle2, title: "Il cambiamento è possibile", description: "Anche i pattern più radicati possono essere trasformati. L'Analisi Transazionale offre strumenti concreti per cambiare schemi relazionali ripetitivi." },
             { icon: Award, title: "Formazione specifica", description: "Mi sono formata specificamente su dipendenza affettiva, disturbi di personalità e disturbi alimentari per offrire un supporto mirato ed efficace." },
           ].map((item, i) => (

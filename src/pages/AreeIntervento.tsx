@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
-import { Heart, Shield, Leaf, Brain, Flame, Star, AlertCircle, MessageCircle, CheckCircle2, ArrowRight } from "lucide-react";
+import { Heart, Shield, Leaf, Brain, Flame, Star, AlertCircle, MessageCircle, CheckCircle2, ArrowRight, CloudRain, Compass } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const aree = [
@@ -36,22 +36,22 @@ const aree = [
       "Immagine di sé instabile, non sai chi sei davvero",
       "Rabbia intensa e inappropriata",
     ],
-    come: "La psicoterapia con il disturbo borderline richiede un lavoro profondo sulla regolazione emotiva e sulla stabilità relazionale. Creo un ambiente terapeutico sicuro e prevedibile, dove puoi esplorare le tue emozioni senza sentirti giudicata. Lavoriamo sulla mentalizzazione, sulla gestione dell'impulsività e sulla costruzione di un'identità più stabile.",
+    come: "La psicoterapia con il disturbo borderline richiede un lavoro profondo sulla regolazione emotiva e sulla stabilità relazionale. Creo un ambiente terapeutico sicuro e prevedibile, dove puoi esplorare le tue emozioni senza sentirti giudicato/a. Lavoriamo sulla mentalizzazione, sulla gestione dell'impulsività e sulla costruzione di un'identità più stabile.",
   },
   {
     icon: Leaf,
     title: "Disturbi alimentari",
     id: "disturbi-alimentari",
-    intro: "I disturbi alimentari non riguardano solo il cibo: sono l'espressione di un disagio profondo che tocca l'identità, le relazioni e il modo di gestire le emozioni.",
+    intro: "I disturbi alimentari non riguardano solo il cibo: sono l'espressione di un disagio profondo che tocca l'identità, le relazioni e il modo di regolare le emozioni.",
     segnali: [
       "Rapporto conflittuale con il cibo (restrizione, abbuffate, purghe)",
       "Pensiero ossessivo sul peso e sulla forma del corpo",
-      "Usare il cibo per gestire le emozioni",
+      "Usare il cibo per regolare le emozioni",
       "Evitamento sociale legato al cibo o al corpo",
       "Senso di colpa e vergogna dopo aver mangiato",
       "Controllo eccessivo su calorie, porzioni, esercizio fisico",
     ],
-    come: "Non lavoro sulla dieta ma sulla relazione con il cibo, con il corpo e con te stessa. Esploriamo insieme il significato emotivo del sintomo alimentare e lavoriamo sulle difficoltà relazionali e identitarie che lo alimentano. Quando necessario, collaboro con nutrizionisti e medici per un approccio integrato.",
+    come: "Non lavoro sulla dieta ma sulla relazione con il cibo, con il corpo e con te stesso/a. Esploriamo insieme il significato emotivo del sintomo alimentare e lavoriamo sulle difficoltà relazionali e identitarie che lo alimentano. Quando necessario, collaboro con nutrizionisti e medici per un approccio integrato.",
   },
   {
     icon: Shield,
@@ -65,9 +65,9 @@ const aree = [
       "Emozioni molto intense e difficili da regolare",
       "Paura intensa dell'abbandono",
       "Senso di vuoto cronico e instabilità dell'immagine di sé",
-      "Impulsività e difficoltà nella gestione della rabbia",
+      "Impulsività e difficoltà nella regolazione della rabbia",
     ],
-    come: "La psicoterapia con i disturbi di personalità richiede un lavoro profondo sulla regolazione emotiva e sulla stabilità relazionale. Creo un ambiente terapeutico sicuro e prevedibile, dove puoi esplorare le tue emozioni senza sentirti giudicata.",
+    come: "La psicoterapia con i disturbi di personalità richiede un lavoro profondo sulla regolazione emotiva e sulla stabilità relazionale. Creo un ambiente terapeutico sicuro e prevedibile, dove puoi esplorare le tue emozioni senza sentirti giudicato/a.",
   },
   {
     icon: Brain,
@@ -113,7 +113,37 @@ const aree = [
       "Umore basso, mancanza di energia e motivazione",
       "Momenti di crisi legati a separazioni, lutti, cambiamenti di vita",
     ],
-    come: "Lavoriamo sul tuo dialogo interno e su come ti sei costruita un'immagine di te che non ti corrisponde. Attraverso l'Analisi Transazionale, esploriamo le convinzioni su te stessa che hai interiorizzato e che oggi ti limitano.",
+    come: "Lavoriamo sul tuo dialogo interno e su come ti sei costruito/a un'immagine di te che non ti corrisponde. Attraverso l'Analisi Transazionale, esploriamo le convinzioni su te stesso/a che hai interiorizzato e che oggi ti limitano.",
+  },
+  {
+    icon: CloudRain,
+    title: "Elaborazione del lutto",
+    id: "lutto",
+    intro: "La perdita di una persona cara è tra le esperienze più dolorose che possiamo vivere. Il lutto ha i suoi tempi e non esiste un modo giusto o sbagliato di attraversarlo, ma quando il dolore diventa paralizzante o sembra non trovare una via d'uscita, chiedere aiuto è un atto di cura verso se stessi.",
+    segnali: [
+      "Dolore intenso che non accenna a diminuire con il passare del tempo",
+      "Difficoltà a riprendere le attività quotidiane e a trovare motivazione",
+      "Senso di colpa, rabbia o rimpianto legati alla perdita",
+      "Isolamento sociale e ritiro dalle relazioni",
+      "Sensazione di vuoto persistente o di aver perso una parte di sé",
+      "Difficoltà a parlare della persona cara senza essere travolti dall'emozione",
+    ],
+    come: "Lavoriamo insieme per dare spazio al dolore senza esserne sopraffatti. Il percorso terapeutico ti aiuta a elaborare la perdita, a trovare un significato in ciò che è accaduto e a integrare l'assenza nella tua vita, conservando il legame con la persona cara in una forma nuova.",
+  },
+  {
+    icon: Compass,
+    title: "Trauma",
+    id: "trauma",
+    intro: "Il trauma non è solo ciò che è accaduto, ma l'effetto che ha lasciato su di te. Esperienze dolorose — relazionali, familiari o di altro tipo — possono continuare a influenzare il modo in cui vivi, ti relazioni e percepisci te stesso/a, anche a distanza di anni.",
+    segnali: [
+      "Ricordi intrusivi, flashback o incubi legati a un evento doloroso",
+      "Evitamento di situazioni, luoghi o persone che richiamano il trauma",
+      "Stato di allerta costante, ipervigilanza o reazioni eccessive a stimoli innocui",
+      "Difficoltà a fidarsi degli altri e a sentirsi al sicuro nelle relazioni",
+      "Senso di distacco emotivo, intorpidimento o disconnessione da sé",
+      "Difficoltà a regolare le emozioni: esplosioni di rabbia, pianto improvviso, ansia intensa",
+    ],
+    come: "Il lavoro sul trauma richiede un ambiente terapeutico sicuro e un ritmo che rispetti i tuoi tempi. Attraverso l'Analisi Transazionale, esploriamo l'impatto delle esperienze traumatiche sui tuoi schemi relazionali e sulla tua immagine di te, lavorando per restituirti un senso di sicurezza e di padronanza sulla tua vita.",
   },
 ];
 
@@ -129,7 +159,7 @@ const quandoChiedereAiuto = [
   "Le tue relazioni seguono sempre lo stesso schema doloroso",
   "Le emozioni ti travolgono e condizionano la tua vita quotidiana",
   "Il rapporto con il cibo o con il tuo corpo è diventato un problema",
-  "Ti senti bloccata e non sai come andare avanti",
+  "Ti senti bloccato/a e non sai come andare avanti",
   "Le persone vicine ti hanno suggerito di parlare con qualcuno",
 ];
 
@@ -143,7 +173,7 @@ const AreeIntervento = () => (
           <p className="font-script italic text-2xl text-primary">Aree di intervento</p>
           <h1 className="text-4xl md:text-5xl font-serif text-foreground">Di cosa mi occupo</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Mi occupo di difficoltà relazionali, dipendenza affettiva, disturbi di personalità e disturbi alimentari. Ogni percorso è personalizzato e costruito insieme a te.
+            Queste sono le aree in cui mi sono specializzata e che trovi descritte in dettaglio qui sotto. Se la tua difficoltà non rientra tra quelle elencate, contattami: potrei comunque esserti d'aiuto.
           </p>
         </motion.div>
       </div>

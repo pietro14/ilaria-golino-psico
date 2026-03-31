@@ -3,11 +3,10 @@ import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
 import { MapPin, Monitor, Zap, Euro, Clock, MessageCircle, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Servizi = () => (
   <Layout>
-    <SEO title="Servizi" description="Seduta Singola di Consulenza Psicologica, psicoterapia individuale in studio a Roma e online. Scopri i servizi e i costi." path="/servizi" />
+    <SEO title="Servizi" description="Seduta Singola di Terapia, psicoterapia individuale in studio a Roma e online. Scopri i servizi e i costi." path="/servizi" />
     {/* Hero */}
     <section className="section-padding bg-warm-blush">
       <div className="container-wide">
@@ -20,7 +19,7 @@ const Servizi = () => (
           <p className="font-script italic text-2xl text-primary">Come posso lavorare con te</p>
           <h1 className="text-4xl md:text-5xl font-serif text-foreground">I miei servizi</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Offro sedute singole di consulenza psicologica e percorsi di psicoterapia, in presenza a Roma e online.
+            Offro sedute singole di terapia e percorsi di psicoterapia, in presenza a Roma e online.
           </p>
         </motion.div>
       </div>
@@ -36,7 +35,7 @@ const Servizi = () => (
                 <Zap className="w-7 h-7 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-serif text-foreground">Seduta Singola di Consulenza Psicologica</h2>
+                <h2 className="text-2xl md:text-3xl font-serif text-foreground">Seduta Singola di Terapia</h2>
                 <p className="text-muted-foreground mt-1">90-120 minuti &mdash; Un incontro intensivo e mirato</p>
               </div>
             </div>
@@ -46,7 +45,7 @@ const Servizi = () => (
                 &ldquo;A volte non serve iniziare subito un percorso lungo. A volte basta uno spazio per fermarsi, pensare e fare chiarezza.&rdquo;
               </p>
               <p>
-                La Seduta Singola di Consulenza Psicologica &egrave; un incontro intensivo di <strong>90-120 minuti</strong>,
+                La Seduta Singola di Terapia &egrave; un incontro intensivo di <strong>90-120 minuti</strong>,
                 pensato per lavorare in modo mirato su una difficolt&agrave; specifica. Durante la seduta esploreremo insieme
                 la situazione che stai vivendo, individueremo schemi, dinamiche e punti di forza, e ti aiuter&ograve; a trovare
                 nuove prospettive e possibilit&agrave; di cambiamento.
@@ -216,24 +215,15 @@ const Servizi = () => (
           <p className="text-muted-foreground mt-4">
             Scrivimi su WhatsApp per prenotare un appuntamento o per qualsiasi domanda.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <a
-              href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20sui%20suoi%20servizi."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Scrivimi su WhatsApp
-            </a>
-            <Link
-              to="/calcolatore-costo-terapia"
-              className="inline-flex items-center justify-center gap-2 bg-white text-foreground px-8 py-4 rounded-2xl font-medium hover:bg-secondary transition-colors shadow-soft border border-border/50"
-            >
-              <Euro className="w-5 h-5" />
-              Calcola il costo della terapia
-            </Link>
-          </div>
+          <a
+            href="https://wa.me/393515499417?text=Buongiorno%20Dott.ssa%20Golino,%20vorrei%20informazioni%20sui%20suoi%20servizi."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition-opacity shadow-elevated mt-6"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Scrivimi su WhatsApp
+          </a>
         </AnimatedSection>
       </div>
     </section>
