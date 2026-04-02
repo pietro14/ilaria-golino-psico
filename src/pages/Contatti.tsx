@@ -81,7 +81,7 @@ const infoCards = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["Ilaria.golino3@gmail.com", "PEC: ilaria.golino@psypec.it"],
+    lines: ["ilaria.golino3@gmail.com", "PEC: ilaria.golino@psypec.it"],
   },
 ];
 

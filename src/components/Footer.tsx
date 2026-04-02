@@ -69,9 +69,9 @@ const Footer = () => (
               <LinkedinIcon className="w-4 h-4 text-warm-gold" />
               <span>LinkedIn</span>
             </a>
-            <a href="mailto:Ilaria.golino3@gmail.com" className="flex items-center gap-3 text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">
+            <a href="mailto:ilaria.golino3@gmail.com" className="flex items-center gap-3 text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">
               <Mail className="w-4 h-4 text-warm-gold" />
-              <span>Ilaria.golino3@gmail.com</span>
+              <span>ilaria.golino3@gmail.com</span>
             </a>
             <a href="mailto:ilaria.golino@psypec.it" className="flex items-center gap-3 text-warm-cream/70 hover:text-warm-cream transition-colors text-sm">
               <Mail className="w-4 h-4 text-warm-gold" />
