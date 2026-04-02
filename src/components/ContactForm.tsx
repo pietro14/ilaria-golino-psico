@@ -19,7 +19,7 @@ const motivoOptions = [
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-const ContactForm = ({ compact = false }: { compact?: boolean }) => {
+const ContactForm = ({ compact }: { compact?: boolean } = {}) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -241,21 +241,19 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
         </div>
       </div>
 
-      {!compact && (
-        <div className="space-y-2">
-          <label htmlFor="messaggio-f" className="text-sm font-medium text-foreground">
-            Messaggio
-          </label>
-          <textarea
-            id="messaggio-f"
-            rows={4}
-            value={messaggio}
-            onChange={(e) => setMessaggio(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"
-            placeholder="Raccontami brevemente cosa stai vivendo o cosa vorresti affrontare..."
-          />
-        </div>
-      )}
+      <div className="space-y-2">
+        <label htmlFor={`messaggio-${compact ? "c" : "f"}`} className="text-sm font-medium text-foreground">
+          Messaggio
+        </label>
+        <textarea
+          id={`messaggio-${compact ? "c" : "f"}`}
+          rows={4}
+          value={messaggio}
+          onChange={(e) => setMessaggio(e.target.value)}
+          className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"
+          placeholder="Raccontami brevemente cosa stai vivendo o cosa vorresti affrontare..."
+        />
+      </div>
 
       {status === "error" && (
         <div className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
