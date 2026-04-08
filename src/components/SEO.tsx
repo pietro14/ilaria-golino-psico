@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 const SITE_NAME = "Dott.ssa Ilaria Golino — Psicologa Psicoterapeuta Roma";
-const BASE_URL = "https://ilariagolino.it";
+const BASE_URL = "https://www.ilariagolino.it";
 const DEFAULT_DESC = "Dott.ssa Ilaria Golino - Psicologa Psicoterapeuta a Roma. Specializzata in Analisi Transazionale, dipendenza affettiva, difficoltà relazionali, disturbo borderline e disturbi alimentari.";
 const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
@@ -41,6 +41,25 @@ const SEO = ({ title, description = DEFAULT_DESC, path = "", noindex, article }:
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={OG_IMAGE} />
+
+      {/* Breadcrumb structured data */}
+      {title && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+              ...(article
+                ? [
+                    { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/approfondimenti` },
+                    { "@type": "ListItem", position: 3, name: title, item: url },
+                  ]
+                : [{ "@type": "ListItem", position: 2, name: title, item: url }]),
+            ],
+          })}
+        </script>
+      )}
 
       {/* Article structured data */}
       {article && (

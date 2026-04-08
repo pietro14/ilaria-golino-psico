@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -132,6 +133,22 @@ const DomandeRisposte = () => {
   return (
     <Layout>
       <SEO title="Domande e Risposte" description="Le domande più frequenti sulla psicoterapia, i costi, la durata del percorso e il mio approccio." path="/domande-risposte" />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: qaData.map((qa) => ({
+              "@type": "Question",
+              name: qa.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: qa.answer,
+              },
+            })),
+          })}
+        </script>
+      </Helmet>
       {/* Hero */}
       <section className="section-padding bg-warm-blush">
         <div className="container-wide">
