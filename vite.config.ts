@@ -9,6 +9,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  ssr: {
+    noExternal: ['react-helmet-async'],
+  },
   server: {
     proxy: {
       '/api': 'http://localhost:3001',
