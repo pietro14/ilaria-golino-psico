@@ -24,8 +24,8 @@ const Index = () => {
               Uno spazio sicuro per prenderti cura di te
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight text-foreground">
-              Psicoterapeuta a Roma{" "}
-              <span className="text-primary italic">e online</span>
+              Psicoterapeuta a Roma specializzata in relazioni e dipendenza affettiva{" "}
+              <span className="text-primary italic">— Cinecittà e online</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               A volte non serve iniziare subito un percorso lungo. A volte basta uno spazio per fermarsi, pensare e fare chiarezza. Ti accompagno con sedute singole mirate o percorsi di psicoterapia personalizzati.
