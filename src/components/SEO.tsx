@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { BASE_URL, DEFAULT_DESCRIPTION, OG_IMAGE, SITE_NAME, getMeta } from "@/data/seoMeta";
 
 interface SEOProps {
   title?: string;
@@ -11,85 +12,59 @@ interface SEOProps {
   };
 }
 
-const SITE_NAME = "Dott.ssa Ilaria Golino — Psicologa Psicoterapeuta Roma";
-const BASE_URL = "https://www.ilariagolino.it";
-const DEFAULT_DESC = "Dott.ssa Ilaria Golino - Psicologa Psicoterapeuta a Roma. Specializzata in Analisi Transazionale, dipendenza affettiva, difficoltà relazionali, disturbo borderline e disturbi alimentari.";
-const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+function upsertMeta(key: "name" | "property", value: string, content: string) {
+  let el = document.head.querySelector<HTMLMetaElement>(`meta[${key}="${value}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(key, value);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
 
-const SEO = ({ title, description = DEFAULT_DESC, path = "", noindex, article }: SEOProps) => {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
-  const url = `${BASE_URL}${path}`;
+function upsertLink(rel: string, href: string) {
+  let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", rel);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+}
 
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
+// Server returns null; prerender script writes head tags deterministically.
+// On client, updates head imperatively as user navigates. seoMeta is the source
+// of truth when a path is provided; props are the fallback.
+const SEO = ({ title, description, path, noindex, article }: SEOProps) => {
+  useEffect(() => {
+    if (typeof document === "undefined") return;
 
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={article ? "article" : "website"} />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="it_IT" />
-      <meta property="og:image" content={OG_IMAGE} />
+    const resolved = path ? getMeta(path) : null;
+    const finalTitle = resolved?.title ?? (title ? `${title} | ${SITE_NAME}` : SITE_NAME);
+    const finalDesc = resolved?.description ?? description ?? DEFAULT_DESCRIPTION;
+    const finalUrl = `${BASE_URL}${path ?? ""}`;
+    const finalType = article || resolved?.type === "article" ? "article" : "website";
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={OG_IMAGE} />
+    document.title = finalTitle;
+    upsertMeta("name", "description", finalDesc);
+    upsertMeta("name", "robots", noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large");
+    upsertLink("canonical", finalUrl);
 
-      {/* Breadcrumb structured data */}
-      {title && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-              ...(article
-                ? [
-                    { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/approfondimenti` },
-                    { "@type": "ListItem", position: 3, name: title, item: url },
-                  ]
-                : [{ "@type": "ListItem", position: 2, name: title, item: url }]),
-            ],
-          })}
-        </script>
-      )}
+    upsertMeta("property", "og:title", finalTitle);
+    upsertMeta("property", "og:description", finalDesc);
+    upsertMeta("property", "og:url", finalUrl);
+    upsertMeta("property", "og:type", finalType);
+    upsertMeta("property", "og:site_name", SITE_NAME);
+    upsertMeta("property", "og:locale", "it_IT");
+    upsertMeta("property", "og:image", OG_IMAGE);
 
-      {/* Article structured data */}
-      {article && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: title,
-            description,
-            url,
-            image: OG_IMAGE,
-            datePublished: article.datePublished,
-            dateModified: article.datePublished,
-            author: {
-              "@type": "Person",
-              name: article.author,
-              jobTitle: "Psicologa Psicoterapeuta",
-              url: BASE_URL,
-            },
-            publisher: {
-              "@type": "Organization",
-              name: SITE_NAME,
-              url: BASE_URL,
-            },
-            mainEntityOfPage: { "@type": "WebPage", "@id": url },
-          })}
-        </script>
-      )}
-    </Helmet>
-  );
+    upsertMeta("name", "twitter:card", "summary_large_image");
+    upsertMeta("name", "twitter:title", finalTitle);
+    upsertMeta("name", "twitter:description", finalDesc);
+    upsertMeta("name", "twitter:image", OG_IMAGE);
+  }, [title, description, path, noindex, article]);
+
+  return null;
 };
 
 export default SEO;
